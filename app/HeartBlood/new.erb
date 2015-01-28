@@ -1,0 +1,92 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Heart and Blood Diseases <%= @heartblood.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                
+                @model002s1 = DentalIssues.find(:all)
+                
+                
+                 @model002s1.each do |model001|
+                   $fid3 = model001.id
+                   
+                 end
+                  $fid3 = $fid3.to_i
+                  
+                
+                 %>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @heartblood.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="heartblood[id]" class="fieldLabel">Id</label>
+            <input type="text" id="heartblood[id]" name="heartblood[id]" <%= placeholder("Id") %> value="<%= $fid3 %>" />
+          </div>
+      
+          <ol>
+          <li>
+           Chest Pain
+            <input type="radio" id="heartblood[chestpain]-1" value="y" name="heartblood[chestpain]" <%= placeholder("Chestpain") %> />
+            <label for="heartblood[chestpain]-1">Yes</label>
+            <input type="radio" id="heartblood[chestpain]-2" value="n" checked name="heartblood[chestpain]" <%= placeholder("Chestpain") %> />
+              <label for="heartblood[chestpain]-2">No</label>
+          </li>
+          <li>
+           Rheumatic Fever
+            <input type="radio" id="heartblood[rheumaticfever]-1" value="y" name="heartblood[rheumaticfever]" <%= placeholder("Rheumaticfever") %> />
+              <label for="heartblood[rheumaticfever]-1">Yes</label>
+            <input type="radio" id="heartblood[rheumaticfever]-2" value="n" checked name="heartblood[rheumaticfever]" <%= placeholder("Rheumaticfever") %> />
+              <label for="heartblood[rheumaticfever]-2">No</label>
+          </li>
+          <li>
+          Infraction of Heart/Arteries
+            <input type="radio" id="heartblood[infraction]-1" value="y" name="heartblood[infraction]" <%= placeholder("Infraction") %> />
+              <label for="heartblood[infraction]-1">Yes</label>
+            <input type="radio" id="heartblood[infraction]-2" value="n" checked name="heartblood[infraction]" <%= placeholder("Infraction") %> />
+              <label for="heartblood[infraction]-2">No</label>
+          </li>
+          <li>
+          High/Low Blood Pressure
+            <input type="radio" id="heartblood[bp]-1" value="y" name="heartblood[bp]" <%= placeholder("Bp") %> />
+              <label for="heartblood[bp]-1">Yes</label>
+            <input type="radio" id="heartblood[bp]-2" value="n" checked name="heartblood[bp]" <%= placeholder("Bp") %> />
+              <label for="heartblood[bp]-2">No</label>
+         </li>
+         <li>
+         Breathlessness
+         <input type="radio" id="heartblood[breathlessness]-1" value="y" name="heartblood[breathlessness]" <%= placeholder("Breathlessness") %> />
+              <label for="heartblood[breathlessness]-1">Yes</label>
+         <input type="radio" id="heartblood[breathlessness]-2" value="n" checked name="heartblood[breathlessness]" <%= placeholder("Breathlessness") %> />
+              <label for="heartblood[breathlessness]-2">No</label>
+         </li>
+         <li>
+         Palpitation
+         <input type="radio" id="heartblood[palpitation]-1" value="y" name="heartblood[palpitation]" <%= placeholder("Palpitation") %> />
+              <label for="heartblood[palpitation]-1">Yes</label>
+         <input type="radio" id="heartblood[palpitation]-2" value="n" checked name="heartblood[palpitation]" <%= placeholder("Palpitation") %> />
+              <label for="heartblood[palpitation]-2">No</label>
+         </li>
+         <li>
+         Previous Heart attacks?
+        <input type="radio" id="heartblood[heartattack]-1" value="y" name="heartblood[heartattack]" <%= placeholder("Heartattack") %> />
+              <label for="heartblood[heartattack]-1">Yes</label>
+        <input type="radio" id="heartblood[heartattack]-2" value="n" checked name="heartblood[heartattack]" <%= placeholder("Heartattack") %> />
+              <label for="heartblood[heartattack]-2">No</label>
+        </li>
+        </ol>
+      
+
+      <input type="submit" value="Next >>"/>
+              <a href="Lungs\new"> Back
+
+    </form>
+  </div>
+
+</div>

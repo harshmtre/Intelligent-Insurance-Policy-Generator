@@ -1,0 +1,43 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New FinancialForm</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @financialform.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Id: </td>
+                <td class="itemValue"><input type="text" name="financialform[Id]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Annual income: </td>
+                <td class="itemValue"><input type="text" name="financialform[Annual_Income]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Sum assured: </td>
+                <td class="itemValue"><input type="text" name="financialform[Sum_Assured]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Payable time: </td>
+                <td class="itemValue"><input type="text" name="financialform[Payable_Time]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Amount of deposit: </td>
+                <td class="itemValue"><input type="text" name="financialform[Amount_of_Deposit]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

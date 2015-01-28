@@ -1,0 +1,58 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New FemaleSection</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @femalesection.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Id: </td>
+                <td class="itemValue"><input type="text" name="femalesection[Id]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Pregnant: </td>
+                <td class="itemValue"><input type="text" name="femalesection[Pregnant]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Last delivery: </td>
+                <td class="itemValue"><input type="text" name="femalesection[Last_Delivery]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Abortion: </td>
+                <td class="itemValue"><input type="text" name="femalesection[Abortion]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Ump: </td>
+                <td class="itemValue"><input type="text" name="femalesection[UMP]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Rmp: </td>
+                <td class="itemValue"><input type="text" name="femalesection[RMP]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Complications: </td>
+                <td class="itemValue"><input type="text" name="femalesection[Complications]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Weakness: </td>
+                <td class="itemValue"><input type="text" name="femalesection[Weakness]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

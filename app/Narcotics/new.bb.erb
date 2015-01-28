@@ -1,0 +1,53 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New Narcotics</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @narcotics.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Id: </td>
+                <td class="itemValue"><input type="text" name="narcotics[Id]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Alc quan: </td>
+                <td class="itemValue"><input type="text" name="narcotics[Alc_Quan]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Alc type: </td>
+                <td class="itemValue"><input type="text" name="narcotics[Alc_Type]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Smoke quan: </td>
+                <td class="itemValue"><input type="text" name="narcotics[Smoke_Quan]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Tobacco quan: </td>
+                <td class="itemValue"><input type="text" name="narcotics[Tobacco_Quan]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Drugs quan: </td>
+                <td class="itemValue"><input type="text" name="narcotics[Drugs_Quan]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Drugs type: </td>
+                <td class="itemValue"><input type="text" name="narcotics[Drugs_Type]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

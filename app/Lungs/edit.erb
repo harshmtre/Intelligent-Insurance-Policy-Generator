@@ -1,0 +1,56 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @lungs.id %></h1>
+    <a href="<%= url_for :action => :show, :id => @lungs.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @lungs.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @lungs.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="lungs[id]" class="fieldLabel">Id</label>
+            <input type="text" id="lungs[id]" name="lungs[id]" value="<%= @lungs.id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="lungs[tuberculosis]" class="fieldLabel">Tuberculosis</label>
+            <input type="text" id="lungs[tuberculosis]" name="lungs[tuberculosis]" value="<%= @lungs.tuberculosis %>" <%= placeholder( "Tuberculosis" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="lungs[pneumonia]" class="fieldLabel">Pneumonia</label>
+            <input type="text" id="lungs[pneumonia]" name="lungs[pneumonia]" value="<%= @lungs.pneumonia %>" <%= placeholder( "Pneumonia" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="lungs[spittingofblood]" class="fieldLabel">Spittingofblood</label>
+            <input type="text" id="lungs[spittingofblood]" name="lungs[spittingofblood]" value="<%= @lungs.spittingofblood %>" <%= placeholder( "Spittingofblood" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="lungs[bronchitis]" class="fieldLabel">Bronchitis</label>
+            <input type="text" id="lungs[bronchitis]" name="lungs[bronchitis]" value="<%= @lungs.bronchitis %>" <%= placeholder( "Bronchitis" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="lungs[asthma]" class="fieldLabel">Asthma</label>
+            <input type="text" id="lungs[asthma]" name="lungs[asthma]" value="<%= @lungs.asthma %>" <%= placeholder( "Asthma" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="lungs[persistentcough]" class="fieldLabel">Persistentcough</label>
+            <input type="text" id="lungs[persistentcough]" name="lungs[persistentcough]" value="<%= @lungs.persistentcough %>" <%= placeholder( "Persistentcough" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

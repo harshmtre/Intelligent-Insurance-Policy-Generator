@@ -1,0 +1,80 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @personalform.Id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @personalform.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @personalform.Id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Fname</td>
+        <td class="itemValue"><%= @personalform.Fname%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Mname</td>
+        <td class="itemValue"><%= @personalform.Mname%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Lname</td>
+        <td class="itemValue"><%= @personalform.Lname%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Gender</td>
+        <td class="itemValue"><%= @personalform.Gender%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Dob</td>
+        <td class="itemValue"><%= @personalform.Dob%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Pob</td>
+        <td class="itemValue"><%= @personalform.Pob%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Age</td>
+        <td class="itemValue"><%= @personalform.Age%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Address</td>
+        <td class="itemValue"><%= @personalform.Address%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Nationality</td>
+        <td class="itemValue"><%= @personalform.Nationality%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">RelationToInsured</td>
+        <td class="itemValue"><%= @personalform.Relation_to_Insured%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Occupation</td>
+        <td class="itemValue"><%= @personalform.Occupation%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">LengthOfService</td>
+        <td class="itemValue"><%= @personalform.Length_of_Service%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

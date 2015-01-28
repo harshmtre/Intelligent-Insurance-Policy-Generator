@@ -1,0 +1,60 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @stomach.id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @stomach.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @stomach.id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Hepatitis</td>
+        <td class="itemValue"><%= @stomach.hepatitis%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Ulcer</td>
+        <td class="itemValue"><%= @stomach.ulcer%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Colitis</td>
+        <td class="itemValue"><%= @stomach.colitis%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Piles</td>
+        <td class="itemValue"><%= @stomach.piles%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Anaemia</td>
+        <td class="itemValue"><%= @stomach.anaemia%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Jaundice</td>
+        <td class="itemValue"><%= @stomach.jaundice%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Dysentery</td>
+        <td class="itemValue"><%= @stomach.dysentery%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Gallstone</td>
+        <td class="itemValue"><%= @stomach.gallstone%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

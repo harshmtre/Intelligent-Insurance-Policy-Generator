@@ -1,0 +1,85 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Other Diseases <%= @otherdiseases.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                                          
+                                          @model002s1 = DentalIssues.find(:all)
+                                          
+                                          
+                                           @model002s1.each do |model001|
+                                             $fid3 = model001.id
+                                             
+                                           end
+                                            $fid3 = $fid3.to_i
+                                            
+                                          
+                                           %>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @otherdiseases.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="otherdiseases[id]" class="fieldLabel">Id</label>
+            <input type="text" id="otherdiseases[id]" name="otherdiseases[id]" <%= placeholder("Id") %> value="<%= $fid3 %>" />
+          </div>
+      
+          <ol>
+          <li>
+          Cancer
+            <input type="radio" id="otherdiseases[cancer]-1" value="y" name="otherdiseases[cancer]" <%= placeholder("Cancer") %> />
+            <label for="otherdiseases[cancer]-1">Yes</label>
+            <input type="radio" id="otherdiseases[cancer]-2" value="n" checked name="otherdiseases[cancer]" <%= placeholder("Cancer") %> />
+              <label for="otherdiseases[cancer]-2">No</label>
+          </li>
+          <li>
+          HIV AIDS
+            <input type="radio" id="otherdiseases[hiv]-1" value="y" name="otherdiseases[hiv]" <%= placeholder("Hiv") %> />
+              <label for="otherdiseases[hiv]-1">Yes</label>
+            <input type="radio" id="otherdiseases[hiv]-2" value="n" checked name="otherdiseases[hiv]" <%= placeholder("Hiv") %> />
+              <label for="otherdiseases[hiv]-2">No</label>
+          </li>
+          <li>
+          Leprosy
+            <input type="radio" id="otherdiseases[leprosy]-1" value="y" name="otherdiseases[leprosy]" <%= placeholder("Leprosy") %> />
+              <label for="otherdiseases[leprosy]-1">Yes</label>
+            <input type="radio" id="otherdiseases[leprosy]-2" value="n" checked name="otherdiseases[leprosy]" <%= placeholder("Leprosy") %> />
+              <label for="otherdiseases[leprosy]-2">No</label>
+          </li>
+          <li>
+          Rheumatism
+            <input type="radio" id="otherdiseases[rheumatism]-1" value="y" name="otherdiseases[rheumatism]" <%= placeholder("Rheumatism") %> />
+              <label for="otherdiseases[rheumatism]-1">Yes</label>
+            <input type="radio" id="otherdiseases[rheumatism]-2" value="n" checked name="otherdiseases[rheumatism]" <%= placeholder("Rheumatism") %> />
+              <label for="otherdiseases[rheumatism]-2">No</label>
+          </li>
+          <li>
+          Benign Tumor
+            <input type="radio" id="otherdiseases[tumor]-1" value="y" name="otherdiseases[tumor]" <%= placeholder("Tumor") %> />
+              <label for="otherdiseases[tumor]-1">Yes</label>
+            <input type="radio" id="otherdiseases[tumor]-2" value="n" checked name="otherdiseases[tumor]" <%= placeholder("Tumor") %> />
+              <label for="otherdiseases[tumor]-2">No</label>
+          </li>
+          <li>
+          Gout
+            <input type="radio" id="otherdiseases[gout]-1" value="y" name="otherdiseases[gout]" <%= placeholder("Gout") %> />
+              <label for="otherdiseases[gout]-1">Yes</label>
+            <input type="radio" id="otherdiseases[gout]-2" value="n" checked name="otherdiseases[gout]" <%= placeholder("Gout") %> />
+              <label for="otherdiseases[gout]-2">No</label>
+          </li>
+          </ol>
+      
+
+      <input type="submit" value="Next >>"/>
+              <a href="Diabetes\new"> Back
+
+    </form>
+  </div>
+
+</div>

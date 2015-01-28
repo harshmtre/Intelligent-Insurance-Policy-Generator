@@ -1,0 +1,488 @@
+I 04/12/2014 18:13:24:879 00001ae0                 Sync| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:13:24:921 000018fc              RhoRuby| require_compiled: application
+I 04/12/2014 18:13:25:043 000018fc                  APP| Application initialize failed: #<ArgumentError: Type error: argument 0 should be string>;Trace: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/application.rb:14:in `setNotification'
+C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/application.rb:14:in `initialize'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/rho.rb:211:in `new'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/rho.rb:211:in `get_app'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/rho.rb:135:in `init_app'
+I 04/12/2014 18:13:25:090 000018fc           HttpServer| Start HTTP server
+I 04/12/2014 18:13:25:141 000018fc           HttpServer| Listen for connections on port 51932
+I 04/12/2014 18:13:25:196 000018fc         AppCallbacks| addCommand: LOCAL-SERVER-STARTED
+I 04/12/2014 18:13:25:245 00001700         AppCallbacks| LOCAL-SERVER-STARTED is received ++++++++++++++++++++++++++++
+I 04/12/2014 18:13:25:296 00001700         AppCallbacks| process command: LOCAL-SERVER-STARTED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+I 04/12/2014 18:13:25:345 00001700           SystemImpl| rho_sys_report_app_started() has no implementation in RhoSimulator.
+I 04/12/2014 18:13:25:396 00001700         AppCallbacks| process command: UI-CREATED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+I 04/12/2014 18:13:25:445 00001700                  Net| Method: GET;Url: http://127.0.0.1:51932/system/uicreated
+I 04/12/2014 18:13:25:550 000018fc           HttpServer| Process URI: '/system/uicreated'
+I 04/12/2014 18:13:25:755 000018fc                  APP| on_ui_created.navigate to start url: '/app'
+I 04/12/2014 18:13:25:812 00001bd8         QtMainWindow| WebView: loading...
+I 04/12/2014 18:13:25:812 00001700         AppCallbacks| process command: APP-ACTIVATED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+I 04/12/2014 18:13:25:911 00001700                  Net| Method: GET;Url: http://127.0.0.1:51932/system/activateapp
+I 04/12/2014 18:13:25:926 000018fc           HttpServer| Process URI: '/app'
+I 04/12/2014 18:13:26:019 000018fc           HttpServer| Process URI: '/system/activateapp'
+I 04/12/2014 18:13:26:067 000018fc                  APP| AppEvent Activated
+I 04/12/2014 18:13:26:123 00001700         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:13:26:123 000018fc           HttpServer| Process URI: '/app/index.erb'
+I 04/12/2014 18:13:26:220 000018fc                  APP| RHO serve_index: /app/index.erb
+I 04/12/2014 18:13:26:267 000018fc RHO Rho::RhoController| inst_render_index
+I 04/12/2014 18:13:26:333 000018fc              RhoRuby| require_compiled: erb
+I 04/12/2014 18:13:26:420 000018fc                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/index.erb
+I 04/12/2014 18:13:26:508 000018fc                  APP| App error: undefined method `logged_in' for Rho::RhoConnectClient:Class
+ C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/render.rb:111:in `getBinding'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rhoframework.rb:55:in `eval'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rhoframework.rb:55:in `eval_compiled_file'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/render.rb:90:in `inst_render_index'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/render.rb:63:in `renderfile'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/rho.rb:895:in `serve_index'
+I 04/12/2014 18:13:26:567 000018fc           HttpServer| GC Start.
+I 04/12/2014 18:13:26:575 00001bd8         QtMainWindow| WebView: URL changed to http://127.0.0.1:51932/app/index.erb
+I 04/12/2014 18:13:26:625 000018fc           HttpServer| GC End.
+I 04/12/2014 18:13:26:717 000018fc           HttpServer| Process URI: '/favicon.ico'
+I 04/12/2014 18:13:26:729 00001bd8         QtMainWindow| Page load complete.
+E 04/12/2014 18:13:26:778 000018fc           HttpServer| The file /favicon.ico was not found
+I 04/12/2014 18:13:40:726 00001bd8         QtMainWindow| WebView: loading...
+I 04/12/2014 18:13:40:834 000018fc           HttpServer| Process URI: '/app'
+I 04/12/2014 18:13:40:890 000018fc           HttpServer| Process URI: '/app/index.erb'
+I 04/12/2014 18:13:40:945 000018fc                  APP| RHO serve_index: /app/index.erb
+I 04/12/2014 18:13:40:990 000018fc RHO Rho::RhoController| inst_render_index
+I 04/12/2014 18:13:41:034 000018fc                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/index.erb
+I 04/12/2014 18:13:41:091 000018fc                  APP| App error: undefined method `logged_in' for Rho::RhoConnectClient:Class
+ C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/render.rb:111:in `getBinding'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rhoframework.rb:55:in `eval'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rhoframework.rb:55:in `eval_compiled_file'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/render.rb:90:in `inst_render_index'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/render.rb:63:in `renderfile'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/rho.rb:895:in `serve_index'
+I 04/12/2014 18:13:41:142 000018fc           HttpServer| GC Start.
+I 04/12/2014 18:13:41:153 00001bd8         QtMainWindow| WebView: URL changed to http://127.0.0.1:51932/app/index.erb
+I 04/12/2014 18:13:41:192 000018fc           HttpServer| GC End.
+I 04/12/2014 18:13:41:251 00001bd8         QtMainWindow| Page load complete.
+I 04/12/2014 18:13:48:414 00001bd8            RhodesApp| callAppActiveCallback
+I 04/12/2014 18:13:48:479 00001bd8         AppCallbacks| addCommand: APP-DEACTIVATED
+I 04/12/2014 18:13:48:530 00001700         AppCallbacks| APP-DEACTIVATED is received ++++++++++++++++++++++++++++
+I 04/12/2014 18:13:48:530 00001bd8                  Net| Method: GET;Url: http://127.0.0.1:51932/system/deactivateapp
+I 04/12/2014 18:13:48:575 00001700         AppCallbacks| process command: APP-DEACTIVATED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+I 04/12/2014 18:13:48:686 00001700         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:13:48:626 000018fc           HttpServer| Process URI: '/system/deactivateapp'
+I 04/12/2014 18:13:48:779 000018fc                  APP| AppEvent Deactivated
+I 04/12/2014 18:13:48:837 00001bd8                  Net| Method: GET;Url: http://127.0.0.1:51932/system/uidestroyed
+I 04/12/2014 18:13:48:887 000018fc           HttpServer| Process URI: '/system/uidestroyed'
+I 04/12/2014 18:13:48:935 000018fc                  APP| AppEvent UIDestroyed
+I 04/12/2014 18:13:48:990 00001700         AppCallbacks| Thread shutdown
+I 04/12/2014 18:13:49:051 00001bd8           HttpServer| Stopping server...
+I 04/12/2014 18:13:49:102 000018fc            RhodesApp| RhodesApp thread shutdown
+I 04/12/2014 18:13:49:151 000018fc          GeoLocation| Destroying singleton instance.
+I 04/12/2014 18:13:49:200 000018fc                 Sync| Stopping Sync thread
+I 04/12/2014 18:13:49:256 00001ae0                 Sync| Thread shutdown
+I 04/12/2014 18:13:49:260 000018fc            RhoThread| Terminate thread. ID: 6396; Result: 258
+I 04/12/2014 18:14:53:271 00000a3c            RhodesApp| New start params: -approot='C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG' -rhodespath=C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1 
+I 04/12/2014 18:14:53:331 00000a3c                 Main| Rhodes started
+I 04/12/2014 18:14:53:376 000019c8         AppCallbacks| Starting main routine...
+I 04/12/2014 18:14:53:378 00000a3c            RhodesApp| Trying to get free listening port.
+I 04/12/2014 18:14:53:430 000019c8         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:14:53:477 00000a3c            RhodesApp| Trying to bind of 0 port...
+I 04/12/2014 18:14:53:565 00000a3c            RhodesApp| Got port to bind on: 51979
+I 04/12/2014 18:14:53:616 00000a3c            RhodesApp| Free listening port: 51979
+I 04/12/2014 18:14:53:930 00000a3c            RhodesApp| callAppActiveCallback
+I 04/12/2014 18:14:53:981 00000a3c         AppCallbacks| addCommand: APP-ACTIVATED
+I 04/12/2014 18:14:54:108 000019c8         AppCallbacks| APP-ACTIVATED is received ++++++++++++++++++++++++++++
+I 04/12/2014 18:14:54:127 00000a3c         AppCallbacks| addCommand: UI-CREATED
+I 04/12/2014 18:14:54:159 000019c8         AppCallbacks| Received command APP-ACTIVATED which is greater than expected (LOCAL-SERVER-STARTED) - postpone it
+I 04/12/2014 18:14:54:270 000019c8         AppCallbacks| UI-CREATED is received ++++++++++++++++++++++++++++
+I 04/12/2014 18:14:54:270 00000a3c           MainWindow| navigate: 'about:blank'
+I 04/12/2014 18:14:54:270 00000678            RhodesApp| Starting RhodesApp main routine...
+I 04/12/2014 18:14:54:319 000019c8         AppCallbacks| m_uistate: 0
+I 04/12/2014 18:14:54:364 00000a3c         QtMainWindow| WebView: loading...
+I 04/12/2014 18:14:54:426 00000678              RhoRuby| Init_RhoBlobs: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/rhosimulator/db/db-files
+I 04/12/2014 18:14:54:452 000019c8         AppCallbacks| Received command UI-CREATED which is greater than expected (LOCAL-SERVER-STARTED) - postpone it
+I 04/12/2014 18:14:54:508 00000a3c         QtMainWindow| WebView: URL changed to about:blank
+I 04/12/2014 18:14:54:559 00000678              RhoRuby| require_compiled: RhoSystemApi
+I 04/12/2014 18:14:54:607 000019c8         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:14:54:663 00000a3c         QtMainWindow| Page load complete.
+I 04/12/2014 18:14:54:722 00000678              RhoRuby| require_compiled: RhoApplicationApi
+I 04/12/2014 18:14:54:770 000019c8         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:14:54:878 00000678              RhoRuby| require_compiled: RhoNetworkApi
+I 04/12/2014 18:14:54:981 00000678              RhoRuby| require_compiled: RhoDatabaseApi
+I 04/12/2014 18:14:55:052 00000678              RhoRuby| require_compiled: RhoLogApi
+I 04/12/2014 18:14:55:106 00000678              RhoRuby| require_compiled: RhoWebViewApi
+I 04/12/2014 18:14:55:255 00000678              RhoRuby| require_compiled: RhoNativeToolbarApi
+I 04/12/2014 18:14:55:333 00000678              RhoRuby| require_compiled: RhoNativeTabbarApi
+I 04/12/2014 18:14:55:389 00000678              RhoRuby| require_compiled: RhoNotificationApi
+I 04/12/2014 18:14:55:442 00000678              RhoRuby| require_compiled: RhoNativeMenubarApi
+E 04/12/2014 18:14:55:503 00000678              RhoRuby| require_compiled: error: can not find RhoConnectClient
+W 04/12/2014 18:14:55:550 00000678          CExtManager| requireRubyFile cannot find file: RhoConnectClient
+I 04/12/2014 18:14:55:606 00000678 RhoconnectClientManager| setRhoconnectClientImpl ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I 04/12/2014 18:14:55:654 00000678              RhoRuby| require_compiled: digest
+I 04/12/2014 18:14:55:713 00000678              RhoRuby| require_compiled: digest.so
+I 04/12/2014 18:14:55:790 00000678              RhoRuby| require_compiled: rhoframework
+I 04/12/2014 18:14:55:857 00000678              RhoRuby| require_compiled: rational
+I 04/12/2014 18:14:55:908 00000678              RhoRuby| require_compiled: json
+I 04/12/2014 18:14:55:969 00000678              RhoRuby| require_compiled: json/common
+I 04/12/2014 18:14:56:032 00000678              RhoRuby| require_compiled: json/version
+I 04/12/2014 18:14:56:086 00000678              RhoRuby| require_compiled: json/pure
+I 04/12/2014 18:14:56:139 00000678              RhoRuby| require_compiled: json/pure/generator
+I 04/12/2014 18:14:56:335 00000678              RhoRuby| require_compiled: rho/rhoapplication
+I 04/12/2014 18:14:56:392 00000678              RhoRuby| require_compiled: rholang/localization_simplified
+I 04/12/2014 18:14:56:446 00000678              RhoRuby| require_compiled: rho/rhomsg
+I 04/12/2014 18:14:56:496 00000678              RhoRuby| require_compiled: rho/rhotabbar
+I 04/12/2014 18:14:56:553 00000678              RhoRuby| require_compiled: rho/rhotoolbar
+I 04/12/2014 18:14:56:610 00000678                  APP| Current locale: ; Country code: 
+I 04/12/2014 18:14:56:660 00000678                  APP| Locilized file: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/lang_
+I 04/12/2014 18:14:56:705 00000678              RhoRuby| require_compiled: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/lang_en
+I 04/12/2014 18:14:56:790 00000678                  APP| Locilized file: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/lang/lang_
+I 04/12/2014 18:14:56:844 00000678                  APP| Locilized file: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/rhoerror_
+I 04/12/2014 18:14:56:893 00000678              RhoRuby| require_compiled: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/rhoerror_en
+I 04/12/2014 18:14:56:951 00000678                  APP| Locilized file: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/rhomsg_
+I 04/12/2014 18:14:57:004 00000678              RhoRuby| require_compiled: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/rhomsg_en
+I 04/12/2014 18:14:57:057 00000678              RhoRuby| require_compiled: indifferent_access
+I 04/12/2014 18:14:57:108 00000678              RhoRuby| require_compiled: rho/rhosupport
+I 04/12/2014 18:14:57:166 00000678              RhoRuby| require_compiled: rho/rhocontroller
+I 04/12/2014 18:14:57:226 00000678              RhoRuby| require_compiled: rho/render
+I 04/12/2014 18:14:57:314 00000678              RhoRuby| require_compiled: rho/rho
+I 04/12/2014 18:14:57:410 00000678              RhoRuby| require_compiled: rho/rhoerror
+I 04/12/2014 18:14:57:483 00000678              RhoRuby| require_compiled: rhodes
+I 04/12/2014 18:14:57:549 00000678                  APP| Looking for RhoConnectClient
+I 04/12/2014 18:14:57:598 00000678                  APP| RhoConnectClient found. do nothing
+E 04/12/2014 18:14:57:648 00000678              RhoRuby| require_compiled: error: can not find rhodes_translator
+I 04/12/2014 18:14:57:699 00000678              RhoRuby| require_compiled: rho/rhoviewhelpers
+I 04/12/2014 18:14:57:755 00000678              RhoRuby| require_compiled: rho
+I 04/12/2014 18:14:57:803 00000678                  APP| RHOSTUDIO_REMOTE_DEBUG=false
+I 04/12/2014 18:14:57:858 00000678                  APP| RHOSTUDIO_REMOTE_HOST=
+I 04/12/2014 18:14:57:904 00000678                  APP| RHOSTUDIO_REMOTE_PATH=
+I 04/12/2014 18:14:58:004 00000678              RhoRuby| require_compiled: debugger
+I 04/12/2014 18:14:58:073 00000678              RhoRuby| require_compiled: uri
+I 04/12/2014 18:14:58:127 00000678              RhoRuby| require_compiled: uri/common
+I 04/12/2014 18:14:58:214 00000678              RhoRuby| require_compiled: uri/generic
+I 04/12/2014 18:14:58:288 00000678              RhoRuby| require_compiled: uri/ftp
+I 04/12/2014 18:14:58:342 00000678              RhoRuby| require_compiled: uri/http
+I 04/12/2014 18:14:58:394 00000678              RhoRuby| require_compiled: uri/https
+I 04/12/2014 18:14:58:579 00000678              RhoRuby| require_compiled: uri/ldap
+I 04/12/2014 18:14:58:631 00000678              RhoRuby| require_compiled: uri/ldaps
+I 04/12/2014 18:14:58:682 00000678              RhoRuby| require_compiled: uri/mailto
+I 04/12/2014 18:14:58:747 00000678              RhoRuby| require_compiled: timeout
+I 04/12/2014 18:14:58:803 00000678                  APP| [Debugger] Opening connection
+I 04/12/2014 18:14:58:857 00000678                  APP| [Debugger] host=127.0.0.1
+I 04/12/2014 18:14:59:067 00000678                  APP| [Debugger] port=9000
+I 04/12/2014 18:14:59:123 00000678                  APP| [Debugger] path=C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/
+I 04/12/2014 18:15:00:186 00000678                  APP| [Debugger] Unable to open connection to debugger: #<Errno::ECONNREFUSED: No connection could be made because the target machine actively refused it. - connect(2)>
+I 04/12/2014 18:15:00:288 00000678                  APP| RHO loaded
+I 04/12/2014 18:15:00:333 00000678                  APP| Calling RHO.initialize , use_new_orm: 0
+I 04/12/2014 18:15:00:388 00000678                  APP| MZV_DEBUG: we are in use_new_orm false false
+I 04/12/2014 18:15:00:440 00000678                   DB| Open DB: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/rhosimulator/db/syncdbapp.sqlite
+I 04/12/2014 18:15:00:491 00000678                   DB| Open DB: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/rhosimulator/db/syncdbuser.sqlite
+I 04/12/2014 18:15:00:552 00000678                   DB| Open DB: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/rhosimulator/db/syncdblocal.sqlite
+I 04/12/2014 18:15:00:601 00000678              RhoRuby| require_compiled: rhom
+I 04/12/2014 18:15:00:651 00000678              RhoRuby| require_compiled: rhom/rhom
+I 04/12/2014 18:15:00:708 00000678              RhoRuby| require_compiled: rhom/rhom_object_factory
+I 04/12/2014 18:15:00:841 00000678              RhoRuby| require_compiled: rhom/rhom_object
+I 04/12/2014 18:15:00:925 00000678              RhoRuby| require_compiled: rhom/rhom_model
+I 04/12/2014 18:15:00:983 00000678              RhoRuby| require_compiled: rhom/rhom_source
+I 04/12/2014 18:15:01:040 00000678              RhoRuby| require_compiled: rhoappmanifest
+I 04/12/2014 18:15:01:090 00000678              RhoRuby| require_compiled: find
+I 04/12/2014 18:15:01:267 00000678                  APP| model file: Stomach/stomach
+I 04/12/2014 18:15:01:320 00000678                  APP| model file: PersonalForm/personal_form
+I 04/12/2014 18:15:01:371 00000678                  APP| model file: OtherDiseases/other_diseases
+I 04/12/2014 18:15:01:420 00000678                  APP| model file: NervousSystem/nervous_system
+I 04/12/2014 18:15:01:476 00000678                  APP| model file: Narcotics/narcotics
+I 04/12/2014 18:15:01:531 00000678                  APP| model file: Lungs/lungs
+I 04/12/2014 18:15:01:582 00000678                  APP| model file: Login/login
+I 04/12/2014 18:15:01:626 00000678                  APP| model file: HeartBlood/heart_blood
+I 04/12/2014 18:15:01:675 00000678                  APP| model file: GeneralHealth/general_health
+I 04/12/2014 18:15:01:731 00000678                  APP| model file: FinancialForm/financial_form
+I 04/12/2014 18:15:01:781 00000678                  APP| model file: FinalDisplay/final_display
+I 04/12/2014 18:15:01:847 00000678                  APP| model file: FemaleSection/female_section
+I 04/12/2014 18:15:01:897 00000678                  APP| model file: FamliyHistory/famliy_history
+I 04/12/2014 18:15:01:948 00000678                  APP| model file: ExcretarySystem/excretary_system
+I 04/12/2014 18:15:01:993 00000678                  APP| model file: Diabetes/diabetes
+I 04/12/2014 18:15:02:041 00000678                  APP| model file: DentalIssues/dental_issues
+I 04/12/2014 18:15:02:104 00000678                  APP| model file: Delete/delete
+I 04/12/2014 18:15:02:153 00000678                  APP| model file: BodyStructure/body_structure
+I 04/12/2014 18:15:02:215 00000678                  APP| model file: BodilyDefects/bodily_defects
+I 04/12/2014 18:15:02:263 00000678          GeoLocation| Creating singleton instance.
+I 04/12/2014 18:15:02:315 00000678            RhodesApp| Starting sync engine...
+I 04/12/2014 18:15:02:363 00000678                 Sync| sync_poll_interval: 0
+I 04/12/2014 18:15:02:407 00000678                 Sync| syncserver: 
+I 04/12/2014 18:15:02:463 00000678                 Sync| bulksync_state: 0
+I 04/12/2014 18:15:02:591 00000678            RhodesApp| RhoRubyInitApp...
+I 04/12/2014 18:15:02:636 00000678                  APP| init_app
+I 04/12/2014 18:15:02:685 00000678              RhoRuby| require_compiled: application
+I 04/12/2014 18:15:02:709 000002f4                 Sync| Starting main routine...
+I 04/12/2014 18:15:02:742 00000678                  APP| Application initialize failed: #<ArgumentError: Type error: argument 0 should be string>;Trace: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/application.rb:14:in `setNotification'
+C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/application.rb:14:in `initialize'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/rho.rb:211:in `new'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/rho.rb:211:in `get_app'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/rho.rb:135:in `init_app'
+I 04/12/2014 18:15:02:788 000002f4                 Sync| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:15:02:840 00000678           HttpServer| Start HTTP server
+I 04/12/2014 18:15:02:951 00000678           HttpServer| Listen for connections on port 51979
+I 04/12/2014 18:15:02:996 00000678         AppCallbacks| addCommand: LOCAL-SERVER-STARTED
+I 04/12/2014 18:15:03:096 000019c8         AppCallbacks| LOCAL-SERVER-STARTED is received ++++++++++++++++++++++++++++
+I 04/12/2014 18:15:03:151 000019c8         AppCallbacks| process command: LOCAL-SERVER-STARTED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+I 04/12/2014 18:15:03:201 000019c8           SystemImpl| rho_sys_report_app_started() has no implementation in RhoSimulator.
+I 04/12/2014 18:15:03:247 000019c8         AppCallbacks| process command: UI-CREATED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+I 04/12/2014 18:15:03:295 000019c8                  Net| Method: GET;Url: http://127.0.0.1:51979/system/uicreated
+I 04/12/2014 18:15:03:385 00000678           HttpServer| Process URI: '/system/uicreated'
+I 04/12/2014 18:15:03:462 00000678                  APP| on_ui_created.navigate to start url: '/app'
+I 04/12/2014 18:15:03:513 00000a3c         QtMainWindow| WebView: loading...
+I 04/12/2014 18:15:03:513 000019c8         AppCallbacks| process command: APP-ACTIVATED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+I 04/12/2014 18:15:03:629 00000678           HttpServer| Process URI: '/app'
+I 04/12/2014 18:15:03:639 000019c8                  Net| Method: GET;Url: http://127.0.0.1:51979/system/activateapp
+I 04/12/2014 18:15:03:728 00000678           HttpServer| Process URI: '/app/index.erb'
+I 04/12/2014 18:15:03:831 00000678                  APP| RHO serve_index: /app/index.erb
+I 04/12/2014 18:15:03:924 00000678 RHO Rho::RhoController| inst_render_index
+I 04/12/2014 18:15:03:973 00000678              RhoRuby| require_compiled: erb
+I 04/12/2014 18:15:04:049 00000678                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/index.erb
+I 04/12/2014 18:15:04:108 00000678                  APP| App error: undefined method `logged_in' for Rho::RhoConnectClient:Class
+ C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/render.rb:111:in `getBinding'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rhoframework.rb:55:in `eval'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rhoframework.rb:55:in `eval_compiled_file'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/render.rb:90:in `inst_render_index'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/render.rb:63:in `renderfile'
+C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rho/rho.rb:895:in `serve_index'
+I 04/12/2014 18:15:04:158 00000678           HttpServer| GC Start.
+I 04/12/2014 18:15:04:167 00000a3c         QtMainWindow| WebView: URL changed to http://127.0.0.1:51979/app/index.erb
+I 04/12/2014 18:15:04:220 00000678           HttpServer| GC End.
+I 04/12/2014 18:15:04:300 00000a3c         QtMainWindow| Page load complete.
+I 04/12/2014 18:15:04:317 00000678           HttpServer| Process URI: '/system/activateapp'
+I 04/12/2014 18:15:04:482 00000678                  APP| AppEvent Activated
+I 04/12/2014 18:15:04:528 000019c8         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:15:04:528 00000678           HttpServer| Process URI: '/favicon.ico'
+E 04/12/2014 18:15:04:629 00000678           HttpServer| The file /favicon.ico was not found
+I 04/12/2014 18:15:09:010 00000a3c            RhodesApp| callAppActiveCallback
+I 04/12/2014 18:15:09:076 00000a3c         AppCallbacks| addCommand: APP-DEACTIVATED
+I 04/12/2014 18:15:09:131 00000a3c                  Net| Method: GET;Url: http://127.0.0.1:51979/system/deactivateapp
+I 04/12/2014 18:15:09:131 000019c8         AppCallbacks| APP-DEACTIVATED is received ++++++++++++++++++++++++++++
+I 04/12/2014 18:15:09:243 000019c8         AppCallbacks| process command: APP-DEACTIVATED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+I 04/12/2014 18:15:09:190 00000678           HttpServer| Process URI: '/system/deactivateapp'
+I 04/12/2014 18:15:09:293 000019c8         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:15:09:342 00000678                  APP| AppEvent Deactivated
+I 04/12/2014 18:15:09:455 00000a3c                  Net| Method: GET;Url: http://127.0.0.1:51979/system/uidestroyed
+I 04/12/2014 18:15:09:505 00000678           HttpServer| Process URI: '/system/uidestroyed'
+I 04/12/2014 18:15:09:554 00000678                  APP| AppEvent UIDestroyed
+I 04/12/2014 18:15:09:610 000019c8         AppCallbacks| Thread shutdown
+I 04/12/2014 18:15:09:676 00000a3c           HttpServer| Stopping server...
+I 04/12/2014 18:15:09:732 00000678            RhodesApp| RhodesApp thread shutdown
+I 04/12/2014 18:15:09:809 00000678          GeoLocation| Destroying singleton instance.
+I 04/12/2014 18:15:09:863 00000678                 Sync| Stopping Sync thread
+I 04/12/2014 18:15:09:930 000002f4                 Sync| Thread shutdown
+I 04/12/2014 18:15:09:933 00000678            RhoThread| Terminate thread. ID: 1656; Result: 258
+PP| RHO serve: /app/Login
+I 04/12/2014 17:47:15:287 000014d8                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/Login/index.erb
+I 04/12/2014 17:47:15:346 000014d8           HttpServer| GC Start.
+I 04/12/2014 17:47:15:431 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/{131280376913843.97}/show#/app/Login
+I 04/12/2014 17:47:15:449 000014d8           HttpServer| GC End.
+I 04/12/2014 17:47:15:536 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/{131280376913843.97}/show#/app/Login
+I 04/12/2014 17:47:15:656 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login
+I 04/12/2014 17:47:17:225 000014d8           HttpServer| Process URI: '/app/Login/{134149771981404.88}/show'
+I 04/12/2014 17:47:17:323 000014d8                  APP| RHO serve: /app/Login/{134149771981404.88}/show
+I 04/12/2014 17:47:17:373 000014d8                  APP| Params: {"id"=>"{134149771981404.88}"}
+I 04/12/2014 17:47:17:424 000014d8                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/Login/show.erb
+I 04/12/2014 17:47:17:482 000014d8           HttpServer| GC Start.
+I 04/12/2014 17:47:17:539 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login#/app/Login/%7B134149771981404.88%7D/show
+I 04/12/2014 17:47:17:589 000014d8           HttpServer| GC End.
+I 04/12/2014 17:47:17:645 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login#/app/Login/%7B134149771981404.88%7D/show
+I 04/12/2014 17:47:17:773 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/{134149771981404.88}/show
+I 04/12/2014 17:47:19:786 000014d8           HttpServer| Process URI: '/app/Login'
+I 04/12/2014 17:47:19:837 000014d8                  APP| RHO serve: /app/Login
+I 04/12/2014 17:47:19:896 000014d8                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/Login/index.erb
+I 04/12/2014 17:47:19:957 000014d8           HttpServer| GC Start.
+I 04/12/2014 17:47:20:013 000014d8           HttpServer| GC End.
+I 04/12/2014 17:47:20:043 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/{134149771981404.88}/show#/app/Login
+I 04/12/2014 17:47:20:107 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/{134149771981404.88}/show#/app/Login
+I 04/12/2014 17:47:20:178 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login
+I 04/12/2014 17:47:25:588 000014d8           HttpServer| Process URI: '/app/Login/MainPage'
+I 04/12/2014 17:47:25:644 000014d8                  APP| RHO serve: /app/Login/MainPage
+I 04/12/2014 17:47:25:696 000014d8                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/Login/MainPage.erb
+I 04/12/2014 17:47:25:758 000014d8           HttpServer| GC Start.
+I 04/12/2014 17:47:25:815 000014d8           HttpServer| GC End.
+I 04/12/2014 17:47:25:827 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login#/app/Login/MainPage
+I 04/12/2014 17:47:25:917 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login#/app/Login/MainPage
+I 04/12/2014 17:47:25:974 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/MainPage
+I 04/12/2014 17:47:32:005 000014d8           HttpServer| Process URI: '/app/Login/DispPolicy'
+I 04/12/2014 17:47:32:102 000014d8                  APP| RHO serve: /app/Login/DispPolicy
+I 04/12/2014 17:47:32:153 000014d8                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/Login/DispPolicy.erb
+I 04/12/2014 17:47:32:217 000014d8           HttpServer| GC Start.
+I 04/12/2014 17:47:32:254 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/MainPage#/app/Login/DispPolicy
+I 04/12/2014 17:47:32:271 000014d8           HttpServer| GC End.
+I 04/12/2014 17:47:32:323 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/MainPage#/app/Login/DispPolicy
+I 04/12/2014 17:47:32:433 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/DispPolicy
+I 04/12/2014 17:47:33:681 000014d8           HttpServer| Process URI: '/app/Login/DisplayJeevanAnand'
+I 04/12/2014 17:47:33:740 000014d8                  APP| RHO serve: /app/Login/DisplayJeevanAnand
+I 04/12/2014 17:47:33:785 000014d8                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/Login/DisplayJeevanAnand.erb
+I 04/12/2014 17:47:33:850 000014d8           HttpServer| GC Start.
+I 04/12/2014 17:47:33:879 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/DispPolicy#/app/Login/DisplayJeevanAnand
+I 04/12/2014 17:47:33:923 000014d8           HttpServer| GC End.
+I 04/12/2014 17:47:33:999 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/DispPolicy#/app/Login/DisplayJeevanAnand
+I 04/12/2014 17:47:34:105 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/DisplayJeevanAnand
+I 04/12/2014 17:47:36:834 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/DispPolicy
+I 04/12/2014 17:47:37:158 000014d8           HttpServer| Process URI: '/app/Login/DispPolicy'
+I 04/12/2014 17:47:37:205 000014d8                  APP| RHO serve: /app/Login/DispPolicy
+I 04/12/2014 17:47:37:259 000014d8                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/Login/DispPolicy.erb
+I 04/12/2014 17:47:37:307 000014d8           HttpServer| GC Start.
+I 04/12/2014 17:47:37:358 000014d8           HttpServer| GC End.
+I 04/12/2014 17:47:39:006 000014d8           HttpServer| Process URI: '/app/Login/DisplayAnmolJeevan'
+I 04/12/2014 17:47:39:098 000014d8                  APP| RHO serve: /app/Login/DisplayAnmolJeevan
+I 04/12/2014 17:47:39:148 000014d8                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/Login/DisplayAnmolJeevan.erb
+I 04/12/2014 17:47:39:215 000014d8           HttpServer| GC Start.
+I 04/12/2014 17:47:39:250 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/DispPolicy#/app/Login/DisplayAnmolJeevan
+I 04/12/2014 17:47:39:272 000014d8           HttpServer| GC End.
+I 04/12/2014 17:47:39:313 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/DispPolicy#/app/Login/DisplayAnmolJeevan
+I 04/12/2014 17:47:39:436 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/DisplayAnmolJeevan
+I 04/12/2014 17:47:41:969 000003f4         QtMainWindow| WebView: URL changed to http://127.0.0.1:51185/app/Login/DispPolicy
+I 04/12/2014 17:47:42:163 000014d8           HttpServer| Process URI: '/app/Login/DispPolicy'
+I 04/12/2014 17:47:42:227 000014d8                  APP| RHO serve: /app/Login/DispPolicy
+I 04/12/2014 17:47:42:272 000014d8                  APP| eval_compiled_file : C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/Login/DispPolicy.erb
+I 04/12/2014 17:47:42:334 000014d8           HttpServer| GC Start.
+I 04/12/2014 17:47:42:389 000014d8           HttpServer| GC End.
+I 04/12/2014 18:04:34:347 000003f4            RhodesApp| callAppActiveCallback
+I 04/12/2014 18:04:34:465 000003f4         AppCallbacks| addCommand: APP-DEACTIVATED
+I 04/12/2014 18:04:34:514 000003f4                  Net| Method: GET;Url: http://127.0.0.1:51185/system/deactivateapp
+I 04/12/2014 18:04:34:514 00001cf4         AppCallbacks| APP-DEACTIVATED is received ++++++++++++++++++++++++++++
+I 04/12/2014 18:04:34:576 000014d8           HttpServer| Process URI: '/system/deactivateapp'
+I 04/12/2014 18:04:34:632 00001cf4         AppCallbacks| process command: APP-DEACTIVATED<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+I 04/12/2014 18:04:34:681 000014d8                  APP| AppEvent Deactivated
+I 04/12/2014 18:04:34:725 00001cf4         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:04:34:778 000003f4                  Net| Method: GET;Url: http://127.0.0.1:51185/system/uidestroyed
+I 04/12/2014 18:04:34:871 000014d8           HttpServer| Process URI: '/system/uidestroyed'
+I 04/12/2014 18:04:34:921 000014d8                  APP| AppEvent UIDestroyed
+I 04/12/2014 18:04:34:971 00001cf4         AppCallbacks| Thread shutdown
+I 04/12/2014 18:04:35:021 000003f4           HttpServer| Stopping server...
+I 04/12/2014 18:04:35:081 000014d8            RhodesApp| RhodesApp thread shutdown
+I 04/12/2014 18:04:35:132 000014d8          GeoLocation| Destroying singleton instance.
+I 04/12/2014 18:04:35:175 000014d8                 Sync| Stopping Sync thread
+I 04/12/2014 18:04:35:225 00002168                 Sync| Thread shutdown
+I 04/12/2014 18:04:35:228 000014d8            RhoThread| Terminate thread. ID: 5336; Result: 258
+I 04/12/2014 18:13:15:592 00001bd8            RhodesApp| New start params: -approot='C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG' -rhodespath=C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1 
+I 04/12/2014 18:13:15:655 00001bd8                 Main| Rhodes started
+I 04/12/2014 18:13:15:698 00001700         AppCallbacks| Starting main routine...
+I 04/12/2014 18:13:15:700 00001bd8            RhodesApp| Trying to get free listening port.
+I 04/12/2014 18:13:15:747 00001700         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:13:15:823 00001bd8            RhodesApp| Trying to bind of 0 port...
+I 04/12/2014 18:13:15:920 00001bd8            RhodesApp| Got port to bind on: 51932
+I 04/12/2014 18:13:15:969 00001bd8            RhodesApp| Free listening port: 51932
+I 04/12/2014 18:13:16:198 00001bd8            RhodesApp| callAppActiveCallback
+I 04/12/2014 18:13:16:246 00001bd8         AppCallbacks| addCommand: APP-ACTIVATED
+I 04/12/2014 18:13:16:298 00001700         AppCallbacks| APP-ACTIVATED is received ++++++++++++++++++++++++++++
+I 04/12/2014 18:13:16:313 00001bd8         AppCallbacks| addCommand: UI-CREATED
+I 04/12/2014 18:13:16:347 00001700         AppCallbacks| Received command APP-ACTIVATED which is greater than expected (LOCAL-SERVER-STARTED) - postpone it
+I 04/12/2014 18:13:16:453 00001700         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:13:16:454 00001bd8           MainWindow| navigate: 'about:blank'
+I 04/12/2014 18:13:16:455 000018fc            RhodesApp| Starting RhodesApp main routine...
+I 04/12/2014 18:13:16:509 00001700         AppCallbacks| UI-CREATED is received ++++++++++++++++++++++++++++
+I 04/12/2014 18:13:16:557 00001bd8         QtMainWindow| WebView: loading...
+I 04/12/2014 18:13:16:629 000018fc              RhoRuby| Init_RhoBlobs: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/rhosimulator/db/db-files
+I 04/12/2014 18:13:16:658 00001700         AppCallbacks| m_uistate: 0
+I 04/12/2014 18:13:16:708 00001bd8         QtMainWindow| WebView: URL changed to about:blank
+I 04/12/2014 18:13:16:760 000018fc              RhoRuby| require_compiled: RhoSystemApi
+I 04/12/2014 18:13:16:877 00001700         AppCallbacks| Received command UI-CREATED which is greater than expected (LOCAL-SERVER-STARTED) - postpone it
+I 04/12/2014 18:13:16:983 00001bd8         QtMainWindow| Page load complete.
+I 04/12/2014 18:13:17:112 000018fc              RhoRuby| require_compiled: RhoApplicationApi
+I 04/12/2014 18:13:17:168 00001700         AppCallbacks| ThreadQueue blocked for 4294967295 seconds...
+I 04/12/2014 18:13:17:300 000018fc              RhoRuby| require_compiled: RhoNetworkApi
+I 04/12/2014 18:13:17:408 000018fc              RhoRuby| require_compiled: RhoDatabaseApi
+I 04/12/2014 18:13:17:484 000018fc              RhoRuby| require_compiled: RhoLogApi
+I 04/12/2014 18:13:17:548 000018fc              RhoRuby| require_compiled: RhoWebViewApi
+I 04/12/2014 18:13:17:600 000018fc              RhoRuby| require_compiled: RhoNativeToolbarApi
+I 04/12/2014 18:13:17:655 000018fc              RhoRuby| require_compiled: RhoNativeTabbarApi
+I 04/12/2014 18:13:17:705 000018fc              RhoRuby| require_compiled: RhoNotificationApi
+I 04/12/2014 18:13:17:766 000018fc              RhoRuby| require_compiled: RhoNativeMenubarApi
+E 04/12/2014 18:13:17:816 000018fc              RhoRuby| require_compiled: error: can not find RhoConnectClient
+W 04/12/2014 18:13:17:877 000018fc          CExtManager| requireRubyFile cannot find file: RhoConnectClient
+I 04/12/2014 18:13:17:922 000018fc RhoconnectClientManager| setRhoconnectClientImpl ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I 04/12/2014 18:13:17:992 000018fc              RhoRuby| require_compiled: digest
+I 04/12/2014 18:13:18:149 000018fc              RhoRuby| require_compiled: digest.so
+I 04/12/2014 18:13:18:224 000018fc              RhoRuby| require_compiled: rhoframework
+I 04/12/2014 18:13:18:280 000018fc              RhoRuby| require_compiled: rational
+I 04/12/2014 18:13:18:335 000018fc              RhoRuby| require_compiled: json
+I 04/12/2014 18:13:18:391 000018fc              RhoRuby| require_compiled: json/common
+I 04/12/2014 18:13:18:469 000018fc              RhoRuby| require_compiled: json/version
+I 04/12/2014 18:13:18:520 000018fc              RhoRuby| require_compiled: json/pure
+I 04/12/2014 18:13:18:570 000018fc              RhoRuby| require_compiled: json/pure/generator
+I 04/12/2014 18:13:18:637 000018fc              RhoRuby| require_compiled: rho/rhoapplication
+I 04/12/2014 18:13:18:709 000018fc              RhoRuby| require_compiled: rholang/localization_simplified
+I 04/12/2014 18:13:18:763 000018fc              RhoRuby| require_compiled: rho/rhomsg
+I 04/12/2014 18:13:18:812 000018fc              RhoRuby| require_compiled: rho/rhotabbar
+I 04/12/2014 18:13:18:864 000018fc              RhoRuby| require_compiled: rho/rhotoolbar
+I 04/12/2014 18:13:18:912 000018fc                  APP| Current locale: ; Country code: 
+I 04/12/2014 18:13:18:961 000018fc                  APP| Locilized file: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/lang_
+I 04/12/2014 18:13:19:009 000018fc              RhoRuby| require_compiled: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/lang_en
+I 04/12/2014 18:13:19:059 000018fc                  APP| Locilized file: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/lang/lang_
+I 04/12/2014 18:13:19:109 000018fc                  APP| Locilized file: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/rhoerror_
+I 04/12/2014 18:13:19:173 000018fc              RhoRuby| require_compiled: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/rhoerror_en
+I 04/12/2014 18:13:19:223 000018fc                  APP| Locilized file: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/rhomsg_
+I 04/12/2014 18:13:19:275 000018fc              RhoRuby| require_compiled: C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1/lib/framework/rholang/rhomsg_en
+I 04/12/2014 18:13:19:333 000018fc              RhoRuby| require_compiled: indifferent_access
+I 04/12/2014 18:13:19:390 000018fc              RhoRuby| require_compiled: rho/rhosupport
+I 04/12/2014 18:13:19:449 000018fc              RhoRuby| require_compiled: rho/rhocontroller
+I 04/12/2014 18:13:19:507 000018fc              RhoRuby| require_compiled: rho/render
+I 04/12/2014 18:13:19:562 000018fc              RhoRuby| require_compiled: rho/rho
+I 04/12/2014 18:13:19:649 000018fc              RhoRuby| require_compiled: rho/rhoerror
+I 04/12/2014 18:13:19:712 000018fc              RhoRuby| require_compiled: rhodes
+I 04/12/2014 18:13:19:762 000018fc                  APP| Looking for RhoConnectClient
+I 04/12/2014 18:13:19:809 000018fc                  APP| RhoConnectClient found. do nothing
+E 04/12/2014 18:13:19:854 000018fc              RhoRuby| require_compiled: error: can not find rhodes_translator
+I 04/12/2014 18:13:19:909 000018fc              RhoRuby| require_compiled: rho/rhoviewhelpers
+I 04/12/2014 18:13:19:973 000018fc              RhoRuby| require_compiled: rho
+I 04/12/2014 18:13:20:032 000018fc                  APP| RHOSTUDIO_REMOTE_DEBUG=false
+I 04/12/2014 18:13:20:086 000018fc                  APP| RHOSTUDIO_REMOTE_HOST=
+I 04/12/2014 18:13:20:142 000018fc                  APP| RHOSTUDIO_REMOTE_PATH=
+I 04/12/2014 18:13:20:197 000018fc              RhoRuby| require_compiled: debugger
+I 04/12/2014 18:13:20:261 000018fc              RhoRuby| require_compiled: uri
+I 04/12/2014 18:13:20:310 000018fc              RhoRuby| require_compiled: uri/common
+I 04/12/2014 18:13:20:405 000018fc              RhoRuby| require_compiled: uri/generic
+I 04/12/2014 18:13:20:504 000018fc              RhoRuby| require_compiled: uri/ftp
+I 04/12/2014 18:13:20:569 000018fc              RhoRuby| require_compiled: uri/http
+I 04/12/2014 18:13:20:624 000018fc              RhoRuby| require_compiled: uri/https
+I 04/12/2014 18:13:20:676 000018fc              RhoRuby| require_compiled: uri/ldap
+I 04/12/2014 18:13:20:730 000018fc              RhoRuby| require_compiled: uri/ldaps
+I 04/12/2014 18:13:20:787 000018fc              RhoRuby| require_compiled: uri/mailto
+I 04/12/2014 18:13:20:851 000018fc              RhoRuby| require_compiled: timeout
+I 04/12/2014 18:13:20:922 000018fc                  APP| [Debugger] Opening connection
+I 04/12/2014 18:13:20:974 000018fc                  APP| [Debugger] host=127.0.0.1
+I 04/12/2014 18:13:21:040 000018fc                  APP| [Debugger] port=9000
+I 04/12/2014 18:13:21:084 000018fc                  APP| [Debugger] path=C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/app/
+I 04/12/2014 18:13:22:161 000018fc                  APP| [Debugger] Unable to open connection to debugger: #<Errno::ECONNREFUSED: No connection could be made because the target machine actively refused it. - connect(2)>
+I 04/12/2014 18:13:22:261 000018fc                  APP| RHO loaded
+I 04/12/2014 18:13:22:323 000018fc                  APP| Calling RHO.initialize , use_new_orm: 0
+I 04/12/2014 18:13:22:371 000018fc                  APP| MZV_DEBUG: we are in use_new_orm false false
+I 04/12/2014 18:13:22:423 000018fc                   DB| Open DB: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/rhosimulator/db/syncdbapp.sqlite
+I 04/12/2014 18:13:22:474 000018fc                   DB| Open DB: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/rhosimulator/db/syncdbuser.sqlite
+I 04/12/2014 18:13:22:525 000018fc                   DB| Open DB: C:/Aalhad/Old Laptop Memories/TakeAway/Projects/RhoIIPG/workspace1/IIPG/rhosimulator/db/syncdblocal.sqlite
+I 04/12/2014 18:13:22:573 000018fc              RhoRuby| require_compiled: rhom
+I 04/12/2014 18:13:22:628 000018fc              RhoRuby| require_compiled: rhom/rhom
+I 04/12/2014 18:13:22:692 000018fc              RhoRuby| require_compiled: rhom/rhom_object_factory
+I 04/12/2014 18:13:22:802 000018fc              RhoRuby| require_compiled: rhom/rhom_object
+I 04/12/2014 18:13:22:971 000018fc              RhoRuby| require_compiled: rhom/rhom_model
+I 04/12/2014 18:13:23:092 000018fc              RhoRuby| require_compiled: rhom/rhom_source
+I 04/12/2014 18:13:23:142 000018fc              RhoRuby| require_compiled: rhoappmanifest
+I 04/12/2014 18:13:23:195 000018fc              RhoRuby| require_compiled: find
+I 04/12/2014 18:13:23:379 000018fc                  APP| model file: Stomach/stomach
+I 04/12/2014 18:13:23:426 000018fc                  APP| model file: PersonalForm/personal_form
+I 04/12/2014 18:13:23:481 000018fc                  APP| model file: OtherDiseases/other_diseases
+I 04/12/2014 18:13:23:544 000018fc                  APP| model file: NervousSystem/nervous_system
+I 04/12/2014 18:13:23:603 000018fc                  APP| model file: Narcotics/narcotics
+I 04/12/2014 18:13:23:654 000018fc                  APP| model file: Lungs/lungs
+I 04/12/2014 18:13:23:698 000018fc                  APP| model file: Login/login
+I 04/12/2014 18:13:23:743 000018fc                  APP| model file: HeartBlood/heart_blood
+I 04/12/2014 18:13:23:792 000018fc                  APP| model file: GeneralHealth/general_health
+I 04/12/2014 18:13:23:854 000018fc                  APP| model file: FinancialForm/financial_form
+I 04/12/2014 18:13:23:903 000018fc                  APP| model file: FinalDisplay/final_display
+I 04/12/2014 18:13:23:965 000018fc                  APP| model file: FemaleSection/female_section
+I 04/12/2014 18:13:24:013 000018fc                  APP| model file: FamliyHistory/famliy_history
+I 04/12/2014 18:13:24:065 000018fc                  APP| model file: ExcretarySystem/excretary_system
+I 04/12/2014 18:13:24:113 000018fc                  APP| model file: Diabetes/diabetes
+I 04/12/2014 18:13:24:165 000018fc                  APP| model file: DentalIssues/dental_issues
+I 04/12/2014 18:13:24:225 000018fc                  APP| model file: Delete/delete
+I 04/12/2014 18:13:24:287 000018fc                  APP| model file: BodyStructure/body_structure
+I 04/12/2014 18:13:24:336 000018fc                  APP| model file: BodilyDefects/bodily_defects
+I 04/12/2014 18:13:24:387 000018fc          GeoLocation| Creating singleton instance.
+I 04/12/2014 18:13:24:546 000018fc            RhodesApp| Starting sync engine...
+I 04/12/2014 18:13:24:598 000018fc                 Sync| sync_poll_interval: 0
+I 04/12/2014 18:13:24:652 000018fc                 Sync| syncserver: 
+I 04/12/2014 18:13:24:708 000018fc                 Sync| bulksync_state: 0
+I 04/12/2014 18:13:24:758 000018fc            RhodesApp| RhoRubyInitApp...
+I 04/12/2014 18:13:24:758 00001ae0                 Sync| Starting main routine...
+I 04/12/2014 18:13:24:802 000018fc                  APP| init_app
+led: rational
+}
+gin/new

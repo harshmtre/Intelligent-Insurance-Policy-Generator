@@ -1,0 +1,53 @@
+<head><title>Login</title></head>
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @login.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>" name="myForm"  >
+      <input type="hidden" name="id" value="<%= @login.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="login[user]" class="fieldLabel">Username</label>
+            <input type="text" id="login[user]" name="login[user]" <%= placeholder("User") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="login[pass]" class="fieldLabel">Password</label>
+            <input type="password" id="login[pass]" name="login[pass]" <%= placeholder("Pass") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <input type="hidden" id="login[status]" name="login[status]" <%= placeholder("Status") %> />
+          </div>
+      
+
+      <input type="button" value="Login" onclick="validateForm();"/>
+    </form>
+  </div>
+              <script type="text/javascript">
+                            function validateForm(){
+                                   var username = document.forms["myForm"]["login[user]"].value;
+                                   var pass=document.forms["myForm"]["login[pass]"].value;
+                                   if (username==null || username==""){
+                                     
+                                      alert("UserName can't be empty");
+                                      
+                                      return;
+                                   }
+                                   if(pass==null || pass=="")
+                                   {
+                                     alert("Password can't be empty");
+                                     return;
+                                   }
+                                   
+                                   document.forms["myForm"].submit();
+                                 }
+                                 </script>
+</div>

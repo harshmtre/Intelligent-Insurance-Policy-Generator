@@ -1,0 +1,56 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @narcotics.Id %></h1>
+    <a href="<%= url_for :action => :show, :id => @narcotics.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @narcotics.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @narcotics.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Id]" class="fieldLabel">Id</label>
+            <input type="text" id="narcotics[Id]" name="narcotics[Id]" value="<%= @narcotics.Id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Alc_Quan]" class="fieldLabel">Alc quan</label>
+            <input type="text" id="narcotics[Alc_Quan]" name="narcotics[Alc_Quan]" value="<%= @narcotics.Alc_Quan %>" <%= placeholder( "Alc quan" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Alc_Type]" class="fieldLabel">Alc type</label>
+            <input type="text" id="narcotics[Alc_Type]" name="narcotics[Alc_Type]" value="<%= @narcotics.Alc_Type %>" <%= placeholder( "Alc type" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Smoke_Quan]" class="fieldLabel">Smoke quan</label>
+            <input type="text" id="narcotics[Smoke_Quan]" name="narcotics[Smoke_Quan]" value="<%= @narcotics.Smoke_Quan %>" <%= placeholder( "Smoke quan" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Tobacco_Quan]" class="fieldLabel">Tobacco quan</label>
+            <input type="text" id="narcotics[Tobacco_Quan]" name="narcotics[Tobacco_Quan]" value="<%= @narcotics.Tobacco_Quan %>" <%= placeholder( "Tobacco quan" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Drugs_Quan]" class="fieldLabel">Drugs quan</label>
+            <input type="text" id="narcotics[Drugs_Quan]" name="narcotics[Drugs_Quan]" value="<%= @narcotics.Drugs_Quan %>" <%= placeholder( "Drugs quan" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Drugs_Type]" class="fieldLabel">Drugs type</label>
+            <input type="text" id="narcotics[Drugs_Type]" name="narcotics[Drugs_Type]" value="<%= @narcotics.Drugs_Type %>" <%= placeholder( "Drugs type" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

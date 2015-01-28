@@ -1,0 +1,86 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @personalform.Id %></h1>
+    <a href="<%= url_for :action => :show, :id => @personalform.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @personalform.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @personalform.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Id]" class="fieldLabel">Id</label>
+            <input type="text" readonly="readonly" id="personalform[Id]" name="personalform[Id]" value="<%= @personalform.Id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Fname]" class="fieldLabel">First Name</label>
+            <input type="text" id="personalform[Fname]" name="personalform[Fname]" value="<%= @personalform.Fname %>" <%= placeholder( "Fname" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Mname]" class="fieldLabel">Middle Name</label>
+            <input type="text" id="personalform[Mname]" name="personalform[Mname]" value="<%= @personalform.Mname %>" <%= placeholder( "Mname" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Lname]" class="fieldLabel">Last Name</label>
+            <input type="text" id="personalform[Lname]" name="personalform[Lname]" value="<%= @personalform.Lname %>" <%= placeholder( "Lname" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Gender]" class="fieldLabel">Gender</label>
+            <input type="text" id="personalform[Gender]" name="personalform[Gender]" value="<%= @personalform.Gender %>" <%= placeholder( "Gender" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Dob]" class="fieldLabel">Date of Birth </label>
+            <input type="text" id="personalform[Dob]" name="personalform[Dob]" value="<%= @personalform.Dob %>" <%= placeholder( "Dob" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Pob]" class="fieldLabel">Place of Birth </label>
+            <input type="text" id="personalform[Pob]" name="personalform[Pob]" value="<%= @personalform.Pob %>" <%= placeholder( "Pob" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Age]" class="fieldLabel">Age</label>
+            <input type="text" id="personalform[Age]" name="personalform[Age]" value="<%= @personalform.Age %>" <%= placeholder( "Age" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Address]" class="fieldLabel">Address</label>
+            <input type="text" id="personalform[Address]" name="personalform[Address]" value="<%= @personalform.Address %>" <%= placeholder( "Address" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Nationality]" class="fieldLabel">Nationality</label>
+            <input type="text" id="personalform[Nationality]" name="personalform[Nationality]" value="<%= @personalform.Nationality %>" <%= placeholder( "Nationality" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Relation_to_Insured]" class="fieldLabel">Relationship to the Insured</label>
+            <input type="text" id="personalform[Relation_to_Insured]" name="personalform[Relation_to_Insured]" value="<%= @personalform.Relation_to_Insured %>" <%= placeholder( "Relation to insured" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Occupation]" class="fieldLabel">Occupation</label>
+            <input type="text" id="personalform[Occupation]" name="personalform[Occupation]" value="<%= @personalform.Occupation %>" <%= placeholder( "Occupation" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Length_of_Service]" class="fieldLabel">Length of Service</label>
+            <input type="text" id="personalform[Length_of_Service]" name="personalform[Length_of_Service]" value="<%= @personalform.Length_of_Service %>" <%= placeholder( "Length of service" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

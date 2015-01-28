@@ -1,0 +1,153 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>General Health <%= @generalhealth.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                     
+                   @financialforms1 = PersonalForm.find(:all)
+                    
+                     
+                   @financialforms1.each do |personalform|
+                    $fid2 = personalform.Id
+                        
+                     end
+                       $fid2 = $fid2.to_i
+                       
+                     
+              %>
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>" name="myForm">
+      <input type="hidden" name="id" value="<%= @generalhealth.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Id]" class="fieldLabel">Id</label>
+            <input type="text" readonly="readonly" value="<%=$fid2%>" id="generalhealth[Id]" name="generalhealth[Id]" <%= placeholder("Id") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Email]" class="fieldLabel">Email Id</label>
+            <input type="email" id="generalhealth[Email]" name="generalhealth[Email]" <%= placeholder("Email") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Army_Navy]" class="fieldLabel">Are you planning to join the Army or Navy?</label>
+            <input type="radio" id="generalhealth[Army_Navy]-1" value="y" name="generalhealth[Army_Navy]" <%= placeholder("Army navy") %> />
+            <label for="generalhealth[Army_Navy]-1"> Yes </label>
+            <input type="radio" id="generalhealth[Army_Navy]-2" value="n" checked name="generalhealth[Army_Navy]" <%= placeholder("Army navy") %> />
+              <label for="generalhealth[Army_Navy]-2"> No </label>           
+            </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Height]" class="fieldLabel">Height</label>
+            <input type="number" id="generalhealth[Height]" name="generalhealth[Height]" <%= placeholder("Height") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Weight]" class="fieldLabel">Weight</label>
+            <input type="number" id="generalhealth[Weight]" name="generalhealth[Weight]" <%= placeholder("Weight") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Doc]" class="fieldLabel">General Practitioner</label>
+            <input type="text" id="generalhealth[Doc]" name="generalhealth[Doc]" <%= placeholder("Doc") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Prev_Surgeries]" class="fieldLabel">Previous Surgeries</label>
+            <input type="text" id="generalhealth[Prev_Surgeries]" name="generalhealth[Prev_Surgeries]" <%= placeholder("Prev surgeries") %> />
+          </div>
+      
+
+      <input type="button" value="Create" onclick="validateForm()"/>
+              <a href="FinancialForm\new"> Back
+    </form>
+  </div>
+              <script type="text/javascript">
+                                                  function validateForm()
+                                                  {
+                                                    
+                                                    var email=document.forms["myForm"]["generalhealth[Email]"].value;
+                                                    var height=document.forms["myForm"]["generalhealth[Height]"].value;  
+                                                    var weight=document.forms["myForm"]["generalhealth[Weight]"].value;
+                                                    var prev=document.forms["myForm"]["generalhealth[Prev_Surgeries]"].value;  
+                                                    var doc=document.forms["myForm"]["generalhealth[Doc]"].value;
+                                                                                                  
+                                                    
+                                                    if(email==null||email=="")
+                                                    {
+                                                        alert("Email cannot be empty"); 
+                                                        return;      
+                                                    }
+                                                   
+                                                      var at="@"
+                                                      var dot="."
+                                                      var lat=email.indexOf(at)
+                                                      var lstr=email.length
+                                                      var ldot=email.indexOf(dot)
+                                                      if (email.indexOf(at)==-1){
+                                                      alert("The Email address '@' convention appears to be invalid.")
+                                                      return;
+                                                      }
+                                                      if (email.indexOf(at)==-1 || email.indexOf(at)==0 || email.indexOf(at)==lstr){
+                                                      alert("The Email address '@' convention appears to be invalid.")
+                                                      return;
+                                                      }
+                                                      if (email.indexOf(dot)==-1 || email.indexOf(dot)==0 || email.indexOf(dot)==lstr){
+                                                      alert("The Email address 'dot' convention appears to be invalid.")
+                                                      return;
+                                                      }
+                                                      if (email.indexOf(at,(lat+1))!=-1){
+                                                      alert("The Email address '@' convention appears to be invalid.")
+                                                      return;
+                                                      }
+                                                      if (email.substring(lat-1,lat)==dot || email.substring(lat+1,lat+2)==dot){
+                                                      alert("The Email address 'dot' convention appears to be invalid.")
+                                                      return;
+                                                      }
+                                                      if (email.indexOf(dot,(lat+2))==-1){
+                                                      alert("The Email address 'dot' convention appears to be invalid.")
+                                                      return;
+                                                      }
+                                                      if (email.indexOf(" ")!=-1){
+                                                      alert("The Email address spacing convention appears to be invalid.")
+                                                      return;
+                                                      }
+
+                                                    if(height==null||height=="")
+                                                    {
+                                                        alert("Please enter the Height");    
+                                                      return;     
+                                                    }
+                                                    
+                                                    if(isNaN(height))
+                                                    {
+                                                      alert("Height should be Numeric");  
+                                                      return;
+                                                    }
+                                                    
+                                                      if(weight==null||weight=="")
+                                                    {
+                                                      alert("Please enter the Weight");    
+                                                         return;     
+                                                    }
+                                                    
+                                                   if(isNaN(weight))
+                                                    {
+                                                     alert("Weight should be Numeric");  
+                                                       return;
+                                                   } 
+                                                  if(doc==null||doc=="")
+                                                    {
+                                                      alert("Please mention your family doctor"); 
+                                                        return;      
+                                                   }
+                                                     document.forms["myForm"].submit();
+                                                  }
+                              </script>
+
+</div>

@@ -1,0 +1,47 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @excretarysystem.id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @excretarysystem.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @excretarysystem.id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Chronic</div>
+            <div class="itemValue"><%= @excretarysystem.chronic %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Prostratediseases</div>
+            <div class="itemValue"><%= @excretarysystem.prostratediseases %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Urinary</div>
+            <div class="itemValue"><%= @excretarysystem.urinary %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Kidneystone</div>
+            <div class="itemValue"><%= @excretarysystem.kidneystone %></div>
+          </li>
+      
+    </ul>
+  </div><% @id = @excretarysystem.id %>
+      <%  @finance = ExcretarySystem.find(:first, :conditions => {'id' => @id})%>
+      <a href="<%= url_for( :controller => :NervousSystem, :action => :show, :id => @finance.id) %>">
+              Next</div>
+
+</div>

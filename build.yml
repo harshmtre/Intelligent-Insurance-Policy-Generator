@@ -1,0 +1,33 @@
+#sdk: "D:/MotorolaRhoMobileSuite2.2.1.13/ruby/lib/ruby/gems/1.9.1/gems/rhodes-3.5.1.13"
+sdkversion: "3.5.0"
+name: "IIPG"
+version: 1.0
+vendor: "rhomobile"
+build: "debug"
+bbver: 4.6
+applog: "rholog.txt"
+iphone:
+  configuration: "Release"
+  sdk: "iphonesimulator5.0"
+  provisionprofile: 
+  codesignidentity: 
+  entitlements: 
+  BundleIdentifier: "com.rhomobile.iipg"
+  BundleURLScheme: "iipg"
+wp:
+  productid: "4eabf5a0-5e2e-0130-f950-001e379e67db"
+symbian:
+  uid: "0xe9427d3a"
+android:
+  version: 2.1
+  capabilities: 
+extensions:
+  - json
+  - another-extension
+capabilities:
+  - gps
+  - camera
+  - phone
+  - bluetooth
+  - calendar
+sdk: "C:/MotorolaRhoMobileSuite4.1.1/ruby/lib/ruby/gems/1.9.1/gems/rhodes-4.1.1"

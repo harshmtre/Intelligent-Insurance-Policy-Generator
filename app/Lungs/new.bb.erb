@@ -1,0 +1,53 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New Lungs</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @lungs.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Id: </td>
+                <td class="itemValue"><input type="text" name="lungs[id]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Tuberculosis: </td>
+                <td class="itemValue"><input type="text" name="lungs[tuberculosis]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Pneumonia: </td>
+                <td class="itemValue"><input type="text" name="lungs[pneumonia]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Spittingofblood: </td>
+                <td class="itemValue"><input type="text" name="lungs[spittingofblood]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Bronchitis: </td>
+                <td class="itemValue"><input type="text" name="lungs[bronchitis]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Asthma: </td>
+                <td class="itemValue"><input type="text" name="lungs[asthma]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Persistentcough: </td>
+                <td class="itemValue"><input type="text" name="lungs[persistentcough]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

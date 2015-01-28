@@ -1,0 +1,50 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @financialform.Id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @financialform.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @financialform.Id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">AnnualIncome</div>
+            <div class="itemValue"><%= @financialform.Annual_Income %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">SumAssured</div>
+            <div class="itemValue"><%= @financialform.Sum_Assured %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">PayableTime</div>
+            <div class="itemValue"><%= @financialform.Payable_Time %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">AmountOfDeposit</div>
+            <div class="itemValue"><%= @financialform.Amount_of_Deposit %></div>
+          </li>
+      
+    </ul>
+  </div>
+      <% @id = @financialform.Id %>
+        
+      <%  @finance = FinancialForm.find(:first, :conditions => {'Id' => @id})%>
+        <a href="<%= url_for( :controller => :GeneralHealth, :action => :show, :id => @finance.Id) %>">
+          
+          Next
+     
+</div>

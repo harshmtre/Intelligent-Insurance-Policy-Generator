@@ -1,0 +1,40 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @financialform.Id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @financialform.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @financialform.Id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">AnnualIncome</td>
+        <td class="itemValue"><%= @financialform.Annual_Income%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">SumAssured</td>
+        <td class="itemValue"><%= @financialform.Sum_Assured%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">PayableTime</td>
+        <td class="itemValue"><%= @financialform.Payable_Time%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">AmountOfDeposit</td>
+        <td class="itemValue"><%= @financialform.Amount_of_Deposit%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

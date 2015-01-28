@@ -1,0 +1,55 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @heartblood.id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @heartblood.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @heartblood.id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Chestpain</td>
+        <td class="itemValue"><%= @heartblood.chestpain%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Rheumaticfever</td>
+        <td class="itemValue"><%= @heartblood.rheumaticfever%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Infraction</td>
+        <td class="itemValue"><%= @heartblood.infraction%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Bp</td>
+        <td class="itemValue"><%= @heartblood.bp%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Breathlessness</td>
+        <td class="itemValue"><%= @heartblood.breathlessness%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Palpitation</td>
+        <td class="itemValue"><%= @heartblood.palpitation%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Heartattack</td>
+        <td class="itemValue"><%= @heartblood.heartattack%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

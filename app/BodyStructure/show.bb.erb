@@ -1,0 +1,55 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @bodystructure.id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @bodystructure.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @bodystructure.id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Syphilis</td>
+        <td class="itemValue"><%= @bodystructure.syphilis%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Hernia</td>
+        <td class="itemValue"><%= @bodystructure.hernia%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Goitre</td>
+        <td class="itemValue"><%= @bodystructure.goitre%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Filariasis</td>
+        <td class="itemValue"><%= @bodystructure.filariasis%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Varicoseveins</td>
+        <td class="itemValue"><%= @bodystructure.varicoseveins%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Skineruptions</td>
+        <td class="itemValue"><%= @bodystructure.skineruptions%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Gonorrhea</td>
+        <td class="itemValue"><%= @bodystructure.gonorrhea%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

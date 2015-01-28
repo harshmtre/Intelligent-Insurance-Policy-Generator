@@ -1,0 +1,88 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @personalform.Id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @personalform.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @personalform.Id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">First Name</div>
+            <div class="itemValue"><%= @personalform.Fname %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Middle Name</div>
+            <div class="itemValue"><%= @personalform.Mname %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Last Name</div>
+            <div class="itemValue"><%= @personalform.Lname %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Gender</div>
+            <div class="itemValue"><%= @personalform.Gender %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Date of Birth</div>
+            <div class="itemValue"><%= @personalform.Dob %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Place of Birth</div>
+            <div class="itemValue"><%= @personalform.Pob %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Age</div>
+            <div class="itemValue"><%= @personalform.Age %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Address</div>
+            <div class="itemValue"><%= @personalform.Address %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Nationality</div>
+            <div class="itemValue"><%= @personalform.Nationality %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Relationship to the Insured</div>
+            <div class="itemValue"><%= @personalform.Relation_to_Insured %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Occupation</div>
+            <div class="itemValue"><%= @personalform.Occupation %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Length of Service</div>
+            <div class="itemValue"><%= @personalform.Length_of_Service %></div>
+          </li>
+      
+    </ul>
+  </div>
+  <% @id = @personalform.Id %>
+    <%  @finance = PersonalForm.find(:first, :conditions => {'Id' => @id})%>
+    <a href="<%= url_for( :controller => :FinancialForm, :action => :show, :id => @finance.Id) %>">
+            Next
+                       
+</div>

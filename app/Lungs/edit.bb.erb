@@ -1,0 +1,54 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @lungs.object %>
+    <h1>Edit <%= @lungs.id%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @lungs.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @lungs.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Id: </td>
+              <td class="itemValue"><input type="text" name="lungs[id]" value="<%= @lungs.id %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Tuberculosis: </td>
+              <td class="itemValue"><input type="text" name="lungs[tuberculosis]" value="<%= @lungs.tuberculosis %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Pneumonia: </td>
+              <td class="itemValue"><input type="text" name="lungs[pneumonia]" value="<%= @lungs.pneumonia %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Spittingofblood: </td>
+              <td class="itemValue"><input type="text" name="lungs[spittingofblood]" value="<%= @lungs.spittingofblood %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Bronchitis: </td>
+              <td class="itemValue"><input type="text" name="lungs[bronchitis]" value="<%= @lungs.bronchitis %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Asthma: </td>
+              <td class="itemValue"><input type="text" name="lungs[asthma]" value="<%= @lungs.asthma %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Persistentcough: </td>
+              <td class="itemValue"><input type="text" name="lungs[persistentcough]" value="<%= @lungs.persistentcough %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

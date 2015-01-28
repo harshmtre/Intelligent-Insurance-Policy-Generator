@@ -1,0 +1,35 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @finaldisplay.id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @finaldisplay.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @finaldisplay.id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Value</td>
+        <td class="itemValue"><%= @finaldisplay.value%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Risk</td>
+        <td class="itemValue"><%= @finaldisplay.risk%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Premium</td>
+        <td class="itemValue"><%= @finaldisplay.premium%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

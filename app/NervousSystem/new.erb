@@ -1,0 +1,92 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Nervous System Disorders <%= @nervoussystem.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                          
+                          @model002s1 = DentalIssues.find(:all)
+                          
+                          
+                           @model002s1.each do |model001|
+                             $fid3 = model001.id
+                             
+                           end
+                            $fid3 = $fid3.to_i
+                            
+                          
+                           %>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @nervoussystem.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="nervoussystem[id]" class="fieldLabel">Id</label>
+            <input type="text" id="nervoussystem[id]" name="nervoussystem[id]" <%= placeholder("Id") %> value="<%= $fid3 %>" />
+          </div>
+      
+          <ol>
+          <li>
+          Epilepsy
+            <input type="radio" id="nervoussystem[epilepsy]-1" value="y" name="nervoussystem[epilepsy]" <%= placeholder("Epilepsy") %> />
+            <label for="nervoussystem[epilepsy]-1">Yes</label>
+            <input type="radio" id="nervoussystem[epilepsy]-2" value="n" checked name="nervoussystem[epilepsy]" <%= placeholder("Epilepsy") %> />
+              <label for="nervoussystem[epilepsy]-2">No</label>
+          </li>
+          <li>
+          Paralysis
+            <input type="radio" id="nervoussystem[paralysis]-1" value="y" name="nervoussystem[paralysis]" <%= placeholder("Paralysis") %> />
+              <label for="nervoussystem[paralysis]-1">Yes</label>
+            <input type="radio" id="nervoussystem[paralysis]-2" value="n" checked name="nervoussystem[paralysis]" <%= placeholder("Paralysis") %> />
+              <label for="nervoussystem[paralysis]-2">No</label>
+          </li>
+          <li>
+          Insanity
+            <input type="radio" id="nervoussystem[insanity]-1" value="y" name="nervoussystem[insanity]" <%= placeholder("Insanity") %> />
+              <label for="nervoussystem[insanity]-1">Yes</label>
+            <input type="radio" id="nervoussystem[insanity]-2" value="n" checked name="nervoussystem[insanity]" <%= placeholder("Insanity") %> />
+              <label for="nervoussystem[insanity]-2">No</label>
+          </li>
+          <li>
+          Nervous breakdown
+            <input type="radio" id="nervoussystem[nervousbreakdown]-1" value="y" name="nervoussystem[nervousbreakdown]" <%= placeholder("Nervousbreakdown") %> />
+              <label for="nervoussystem[nervousbreakdown]-1">Yes</label>
+            <input type="radio" id="nervoussystem[nervousbreakdown]-2" value="n" checked name="nervoussystem[nervousbreakdown]" <%= placeholder("Nervousbreakdown") %> />
+              <label for="nervoussystem[nervousbreakdown]-2">No</label>
+          </li>
+          <li>
+          Alzheimer's Disease
+            <input type="radio" id="nervoussystem[alzheimer]-1" value="y" name="nervoussystem[alzheimer]" <%= placeholder("Alzheimer") %> />
+              <label for="nervoussystem[alzheimer]-1">Yes</label>
+            <input type="radio" id="nervoussystem[alzheimer]-2" value="n" checked name="nervoussystem[alzheimer]" <%= placeholder("Alzheimer") %> />
+              <label for="nervoussystem[alzheimer]-2">No</label>
+          </li>
+          <li>
+          Multiple Sclerosis
+            <input type="radio" id="nervoussystem[multiplesclerosis]-1" value="y" name="nervoussystem[multiplesclerosis]" <%= placeholder("Multiplesclerosis") %> />
+              <label for="nervoussystem[multiplesclerosis]-1">Yes</label>
+            <input type="radio" id="nervoussystem[multiplesclerosis]-2" value="n" checked name="nervoussystem[multiplesclerosis]" <%= placeholder("Multiplesclerosis") %> />
+              <label for="nervoussystem[multiplesclerosis]-2">No</label>
+          </li>
+          <li>
+          Parkinson's Disease
+            <input type="radio" id="nervoussystem[parkinson]-1" value="y" name="nervoussystem[parkinson]" <%= placeholder("Parkinson") %> />
+              <label for="nervoussystem[parkinson]-1">Yes</label>
+            <input type="radio" id="nervoussystem[parkinson]-2" value="n" checked name="nervoussystem[parkinson]" <%= placeholder("Parkinson") %> />
+              <label for="nervoussystem[parkinson]-2">No</label>
+          </li>
+          </ol>
+      
+
+      <input type="submit" value="Next >>"/>
+              <a href="ExcetarySystem\new"> Back
+
+    </form>
+  </div>
+
+</div>

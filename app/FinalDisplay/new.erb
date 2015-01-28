@@ -1,0 +1,105 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @finaldisplay.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                      
+                    @financialforms1 = PersonalForm.find(:all)
+                     
+                      
+                    @financialforms1.each do |personalform|
+                     $fid2 = personalform.Id
+                         
+                      end
+                        $fid2 = $fid2.to_i
+                        
+                        @id=$fid2
+                        
+      @financialform = FinancialForm.find(:first, :conditions => {'Id' => @id})    
+        
+      
+      @currpremium=@financialform.Amount_of_Deposit
+      
+      @currpremium=@currpremium.to_f
+      @risk='none'
+      
+      fileNameW67 = File.join(Rho::RhoApplication::get_base_app_path(), '/public/network/FinalCompute22.txt')
+      
+             afile67=File.new(fileNameW67,'r+')
+             while line = afile67.gets
+                  linesplit67 = line.split(",")
+             end
+             @a=linesplit67[0].to_f
+      
+     # @risk='norisk'         
+  
+      if @a<=0.4
+        @risk='No Risk'
+      #@cat=1
+      end
+      
+      if @a<=0.6 && @a>0.4
+       @currpremium=@currpremium+@currpremium*0.05
+       @risk='Low Risk'
+       # @cat=2
+      end
+      
+      if @a<=0.8 && @a>0.6
+       @currpremium=@currpremium+@currpremium*0.1
+       @risk='Medium Risk'
+       # @cat=3
+      end
+      
+      if @a<=0.95 && @a>0.8
+       @currpremium=@currpremium+@currpremium*0.2
+       @risk='High Risk'
+       # @cat=4
+      end
+      
+      if @a<=1 && @a>0.95
+         @risk='Policy Declined'
+        #@cat=5
+      end
+ 
+      %>
+      
+      <br><br>
+
+                      
+              
+        
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @finaldisplay.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="finaldisplay[id]" class="fieldLabel">Id</label>
+            <input type="text" readonly="readonly" value="<%= $fid2 %>" id="finaldisplay[id]" name="finaldisplay[id]" <%= placeholder("Id") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finaldisplay[value]" class="fieldLabel">Value</label>
+            <input type="text" readonly="readonly" value="<%=@a %>" id="finaldisplay[value]" name="finaldisplay[value]" <%= placeholder("Value") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finaldisplay[risk]" class="fieldLabel">Risk</label>
+            <input type="text" readonly="readonly" value="<%=@risk %>" id="finaldisplay[risk]" name="finaldisplay[risk]" <%= placeholder("Risk") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finaldisplay[premium]" class="fieldLabel">Premium</label>
+            <input type="text" readonly="readonly" value="<%=@currpremium %>" id="finaldisplay[premium]" name="finaldisplay[premium]" <%= placeholder("Premium") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

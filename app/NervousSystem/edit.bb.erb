@@ -1,0 +1,59 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @nervoussystem.object %>
+    <h1>Edit <%= @nervoussystem.id%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @nervoussystem.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @nervoussystem.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Id: </td>
+              <td class="itemValue"><input type="text" name="nervoussystem[id]" value="<%= @nervoussystem.id %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Epilepsy: </td>
+              <td class="itemValue"><input type="text" name="nervoussystem[epilepsy]" value="<%= @nervoussystem.epilepsy %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Paralysis: </td>
+              <td class="itemValue"><input type="text" name="nervoussystem[paralysis]" value="<%= @nervoussystem.paralysis %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Insanity: </td>
+              <td class="itemValue"><input type="text" name="nervoussystem[insanity]" value="<%= @nervoussystem.insanity %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Nervousbreakdown: </td>
+              <td class="itemValue"><input type="text" name="nervoussystem[nervousbreakdown]" value="<%= @nervoussystem.nervousbreakdown %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Alzheimer: </td>
+              <td class="itemValue"><input type="text" name="nervoussystem[alzheimer]" value="<%= @nervoussystem.alzheimer %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Multiplesclerosis: </td>
+              <td class="itemValue"><input type="text" name="nervoussystem[multiplesclerosis]" value="<%= @nervoussystem.multiplesclerosis %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Parkinson: </td>
+              <td class="itemValue"><input type="text" name="nervoussystem[parkinson]" value="<%= @nervoussystem.parkinson %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

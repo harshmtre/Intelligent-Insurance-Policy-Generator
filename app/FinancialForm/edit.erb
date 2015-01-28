@@ -1,0 +1,46 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @financialform.Id %></h1>
+    <a href="<%= url_for :action => :show, :id => @financialform.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @financialform.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @financialform.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="financialform[Id]" class="fieldLabel">Id</label>
+            <input type="text" id="financialform[Id]" name="financialform[Id]" value="<%= @financialform.Id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="financialform[Annual_Income]" class="fieldLabel">Annual income</label>
+            <input type="text" id="financialform[Annual_Income]" name="financialform[Annual_Income]" value="<%= @financialform.Annual_Income %>" <%= placeholder( "Annual income" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="financialform[Sum_Assured]" class="fieldLabel">Sum assured</label>
+            <input type="text" id="financialform[Sum_Assured]" name="financialform[Sum_Assured]" value="<%= @financialform.Sum_Assured %>" <%= placeholder( "Sum assured" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="financialform[Payable_Time]" class="fieldLabel">Payable time</label>
+            <input type="text" id="financialform[Payable_Time]" name="financialform[Payable_Time]" value="<%= @financialform.Payable_Time %>" <%= placeholder( "Payable time" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="financialform[Amount_of_Deposit]" class="fieldLabel">Amount of deposit</label>
+            <input type="text" id="financialform[Amount_of_Deposit]" name="financialform[Amount_of_Deposit]" value="<%= @financialform.Amount_of_Deposit %>" <%= placeholder( "Amount of deposit" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,91 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Female Section <%= @femalesection.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                        
+                      @financialforms1 = PersonalForm.find(:all)
+                       
+                        
+                      @financialforms1.each do |personalform|
+                       $fid2 = personalform.Id
+                           
+                        end
+                          $fid2 = $fid2.to_i
+                          
+                        
+                 %>
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @femalesection.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Id]" class="fieldLabel">Id</label>
+            <input type="text" readonly="readonly" value="<%=$fid2%>" id="femalesection[Id]" name="femalesection[Id]" <%= placeholder("Id") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Pregnant]" class="fieldLabel">Are You Pregnant</label>
+            <input type="radio" id="femalesection[Pregnant]-1" value="y" name="femalesection[Pregnant]" <%= placeholder("Pregnant") %> />
+            <label for="femalesection[Pregnant]-1">Yes</label>
+            <input type="radio" id="femalesection[Pregnant]-2" value="n" checked name="femalesection[Pregnant]" <%= placeholder("Pregnant") %> />
+              <label for="femalesection[Pregnant]-2">No</label>
+            </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Last_Delivery]" class="fieldLabel">Date of Last Delivery</label>
+            <input type="text" id="femalesection[Last_Delivery]" name="femalesection[Last_Delivery]" <%= placeholder("Last delivery") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Abortion]" class="fieldLabel"> Any Abortions?</label>
+            <input type="radio" id="femalesection[Abortion]-1" value="y" name="femalesection[Abortion]" <%= placeholder("Abortion") %> />
+            <label for="femalesection[Abortion]-1">Yes</label>
+            <input type="radio" id="femalesection[Abortion]-2" value="n" checked name="femalesection[Abortion]" <%= placeholder("Abortion") %> />
+              <label for="femalesection[Abortion]-2">No</label>
+            </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[UMP]" class="fieldLabel">Unusual Menstrual Pain?</label>
+            <input type="radio" id="femalesection[UMP]-1" value="y" name="femalesection[UMP]" <%= placeholder("Ump") %> />
+            <label for="femalesection[UMP]-1">Yes</label>
+              <input type="radio" id="femalesection[UMP]-2" value="n" checked name="femalesection[UMP]" <%= placeholder("Ump") %> />
+              <label for="femalesection[UMP]-2">No</label>
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[RMP]" class="fieldLabel">Regular Menstrual Periods ?</label>
+            <input type="radio" id="femalesection[RMP]-1" value="y" name="femalesection[RMP]" <%= placeholder("Rmp") %> />
+            <label for="femalesection[RMP]-1">Yes</label>
+              <input type="radio" id="femalesection[RMP]-2" value="n" checked name="femalesection[RMP]" <%= placeholder("Rmp") %> />
+              <label for="femalesection[RMP]-2">No</label>
+              </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Complications]" class="fieldLabel">Any Complications during Pregnancy?</label>
+            <input type="radio" id="femalesection[Complications]-1" value="y" name="femalesection[Complications]" <%= placeholder("Complications") %> />
+            <label for="femalesection[Complications]-1">Yes</label>
+            <input type="radio" id="femalesection[Complications]-2" value="n" checked name="femalesection[Complications]" <%= placeholder("Complications") %> />
+            <label for="femalesection[Complications]-2">No</label>
+            </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Weakness]" class="fieldLabel">Injuries/Weakness due to child bearing/miscarriages?</label>
+            <input type="radio" id="femalesection[Weakness]-1" value="y" name="femalesection[Weakness]" <%= placeholder("Weakness") %> />
+            <label for="femalesection[Weakness]-1">Yes</label>
+            <input type="radio" id="femalesection[Weakness]-2" value="n" checked name="femalesection[Weakness]" <%= placeholder("Weakness") %> />
+            <label for="femalesection[Weakness]-2">No</label>
+            </div>
+      
+
+      <input type="submit" value="Create"/>
+              %> <a href="FamliyHistory\new"> Back <%
+    </form>
+  </div>
+
+</div>

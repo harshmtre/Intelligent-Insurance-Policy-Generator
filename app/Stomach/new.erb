@@ -1,0 +1,97 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Stomach / Liver / Intestine <%= @stomach.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+               
+               @model002s1 = DentalIssues.find(:all)
+               
+               
+                @model002s1.each do |model001|
+                  $fid3 = model001.id
+                  
+                end
+                 $fid3 = $fid3.to_i
+                 
+               
+                %>
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @stomach.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="stomach[id]" class="fieldLabel">Id</label>
+            <input type="text" id="stomach[id]" name="stomach[id]" <%= placeholder("Id") %> value="<%= $fid3 %>" />
+          </div>
+      <ol>
+          <li>
+          Hepatitis
+          <input type="radio" id="stomach[hepatitis]-1" value="y" name="stomach[hepatitis]" <%= placeholder("Hepatitis") %> />
+          <label for="stomach[hepatitis]-1">Yes</label>
+          <input type="radio" id="stomach[hepatitis]-2" value="n" checked name="stomach[hepatitis]" <%= placeholder("Hepatitis") %> />
+              <label for="stomach[hepatitis]-2">no</label>
+          </li>
+          <li>
+          Peptic Ulcer
+          <input type="radio" id="stomach[ulcer]-1" value="y" name="stomach[ulcer]" <%= placeholder("Ulcer") %> />
+              <label for="stomach[ulcer]-1">Yes</label>
+          <input type="radio" id="stomach[ulcer]-2" value="n" checked name="stomach[ulcer]" <%= placeholder("Ulcer") %> />
+              <label for="stomach[ulcer]-2">No</label>
+          </li>
+          <li>
+          Colitis
+          <input type="radio" id="stomach[colitis]-1" value="y" name="stomach[colitis]" <%= placeholder("Colitis") %> />
+              <label for="stomach[colitis]-1">Yes</label>
+          <input type="radio" id="stomach[colitis]-2" value="n" checked name="stomach[colitis]" <%= placeholder("Colitis") %> />
+              <label for="stomach[colitis]-2">No</label>
+          </li>
+          <li>
+          Piles
+          <input type="radio" id="stomach[piles]-1" value="y" name="stomach[piles]" <%= placeholder("Piles") %> />
+              <label for="stomach[piles]-1">Yes</label>
+          <input type="radio" id="stomach[piles]-2" value="n" checked name="stomach[piles]" <%= placeholder("Piles") %> />
+              <label for="stomach[piles]-2">No</label>
+          </li>
+          <li>
+          Anemia
+          <input type="radio" id="stomach[anaemia]-1" value="y" name="stomach[anaemia]" <%= placeholder("Anaemia") %> />
+              <label for="stomach[anaemia]-1">Yes</label>
+          <input type="radio" id="stomach[anaemia]-2" value="n" checked name="stomach[anaemia]" <%= placeholder("Anaemia") %> />
+              <label for="stomach[anaemia]-2">No</label>
+          </li>
+          <li>
+          Jaundice
+          <input type="radio" id="stomach[jaundice]-1" value="y" name="stomach[jaundice]" <%= placeholder("Jaundice") %> />
+              <label for="stomach[jaundice]-1">Yes</label>
+          <input type="radio" id="stomach[jaundice]-2" value="n" checked name="stomach[jaundice]" <%= placeholder("Jaundice") %> />
+              <label for="stomach[jaundice]-2">No</label>
+          </li>
+          <li>
+          Dysentery
+            <input type="radio" id="stomach[dysentery]-1" value="y" name="stomach[dysentery]" <%= placeholder("Dysentery") %> />
+              <label for="stomach[dysentery]-1">Yes</label>
+            <input type="radio" id="stomach[dysentery]-2" value="n" checked name="stomach[dysentery]" <%= placeholder("Dysentery") %> />
+              <label for="stomach[dysentery]-2">No</label>
+          </li>
+          <li>
+          Gallstone
+            <input type="radio" id="stomach[gallstone]-1" value="y" name="stomach[gallstone]" <%= placeholder("Gallstone") %> />
+              <label for="stomach[gallstone]-1">Yes</label>
+            <input type="radio" id="stomach[gallstone]-2" value="n" checked name="stomach[gallstone]" <%= placeholder("Gallstone") %> />
+              <label for="stomach[gallstone]-2">No</label>
+          </li>
+          </ol>
+      
+
+      <input type="submit" value="Next >>"/>
+              <a href="HeartBlood"> Back
+
+    </form>
+  </div>
+
+</div>

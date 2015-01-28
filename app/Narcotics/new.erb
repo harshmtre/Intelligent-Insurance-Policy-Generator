@@ -1,0 +1,105 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Narcotics <%= @narcotics.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                        
+                      @financialforms1 = PersonalForm.find(:all)
+                       
+                        
+                      @financialforms1.each do |personalform|
+                       $fid2 = personalform.Id
+                           
+                        end
+                          $fid2 = $fid2.to_i
+                          
+                        
+                 %>
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @narcotics.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Id]" class="fieldLabel">Id</label>
+            <input type="text" value="<%=$fid2%>" readonly="readonly" id="narcotics[Id]" name="narcotics[Id]" <%= placeholder("Id") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Alc_Quan]" class="fieldLabel">Alcohol Consumption (Drinks Per Day) </label>
+            <input type="radio" id="narcotics[Alc_Quan]-1" value="0" checked name="narcotics[Alc_Quan]" <%= placeholder("Alc quan") %> />
+              <label for="narcotics[Alc_Quan]-1" > No Consumption </label>
+                          
+            <input type="radio" id="narcotics[Alc_Quan]-2" value="5" name="narcotics[Alc_Quan]" <%= placeholder("Alc quan") %> />
+              <label for="narcotics[Alc_Quan]-2" > Upto Two </label>
+                              
+            <input type="radio" id="narcotics[Alc_Quan]-3" value="18" name="narcotics[Alc_Quan]" <%= placeholder("Alc quan") %> />
+              <label for="narcotics[Alc_Quan]-3" > Upto Four </label>
+                              
+            <input type="radio" id="narcotics[Alc_Quan]-4" value="25" name="narcotics[Alc_Quan]" <%= placeholder("Alc quan") %> />
+              <label for="narcotics[Alc_Quan]-4" > Five or More </label>
+                            
+            </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Alc_Type]" class="fieldLabel">Alcohol Type</label>
+            <input type="text" id="narcotics[Alc_Type]" name="narcotics[Alc_Type]" <%= placeholder("Alc type") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Smoke_Quan]" class="fieldLabel">Smoking Quantity (Packs Per Day)</label>
+            <input type="radio" id="narcotics[Smoke_Quan]-1" value="0" checked name="narcotics[Smoke_Quan]" <%= placeholder("Smoke quan") %> />
+              <label for="narcotics[Smoke_Quan]-1"> No consumption  </label>
+              
+              <input type="radio" id="narcotics[Smoke_Quan]-2" value="15" name="narcotics[Smoke_Quan]" <%= placeholder("Smoke quan") %> />
+              <label for="narcotics[Smoke_Quan]-2"> Upto Two  </label>
+             
+              <input type="radio" id="narcotics[Smoke_Quan]-3" value="25" name="narcotics[Smoke_Quan]" <%= placeholder("Smoke quan") %> />
+                           <label for="narcotics[Smoke_Quan]-3"> Upto Four  </label>
+              
+              <input type="radio" id="narcotics[Smoke_Quan]-4" value="30" name="narcotics[Smoke_Quan]" <%= placeholder("Smoke quan") %> />
+                                         <label for="narcotics[Smoke_Quan]-4"> Five or More   </label>
+                                                                                       
+            
+            </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Tobacco_Quan]" class="fieldLabel"> Have you consumed Tobacco in any other form? </label>
+            <input type="radio" id="narcotics[Tobacco_Quan]-1" value="y" name="narcotics[Tobacco_Quan]" <%= placeholder("Tobacco quan") %> />
+  
+              <label for="narcotics[Tobacco_Quan]-1"> Yes </label>
+              <input type="radio" id="narcotics[Tobacco_Quan]-2" value="n" checked name="narcotics[Tobacco_Quan]" <%= placeholder("Tobacco quan") %> />
+      
+                  <label for="narcotics[Tobacco_Quan]-2"> No </label>
+                          
+            </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Drugs_Quan]" class="fieldLabel">Drugs Quantity (in milligrams) </label>
+            <input type="radio" id="narcotics[Drugs_Quan]-1" value="0" checked name="narcotics[Drugs_Quan]" <%= placeholder("Drugs quan") %> />
+              <label for="narcotics[Drugs_Quan]-1"> No Consumption </label>
+            
+              <input type="radio" id="narcotics[Drugs_Quan]-2" value="20"name="narcotics[Drugs_Quan]" <%= placeholder("Drugs quan") %> />
+                            <label for="narcotics[Drugs_Quan]-2"> Upto 100  </label>
+                          
+              <input type="radio" id="narcotics[Drugs_Quan]-3"  value="30" name="narcotics[Drugs_Quan]" <%= placeholder("Drugs quan") %> />
+                            <label for="narcotics[Drugs_Quan]-3"> 100 or more </label>
+                                        
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="narcotics[Drugs_Type]" class="fieldLabel">Drugs type</label>
+            <input type="text" id="narcotics[Drugs_Type]" name="narcotics[Drugs_Type]" <%= placeholder("Drugs type") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+               <a href="GeneralHealth\new"> Back 
+     </form>
+  </div>
+
+</div>

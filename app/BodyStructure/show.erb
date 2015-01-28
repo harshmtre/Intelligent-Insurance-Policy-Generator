@@ -1,0 +1,61 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @bodystructure.id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @bodystructure.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @bodystructure.id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Syphilis</div>
+            <div class="itemValue"><%= @bodystructure.syphilis %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Hernia</div>
+            <div class="itemValue"><%= @bodystructure.hernia %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Goitre</div>
+            <div class="itemValue"><%= @bodystructure.goitre %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Filariasis</div>
+            <div class="itemValue"><%= @bodystructure.filariasis %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Varicoseveins</div>
+            <div class="itemValue"><%= @bodystructure.varicoseveins %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Skineruptions</div>
+            <div class="itemValue"><%= @bodystructure.skineruptions %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Gonorrhea</div>
+            <div class="itemValue"><%= @bodystructure.gonorrhea %></div>
+          </li>
+      
+    </ul>
+  </div><% @id = @bodystructure.id %>
+      <%  @finance = BodyStructure.find(:first, :conditions => {'id' => @id})%>
+      <a href="<%= url_for( :controller => :Diabetes, :action => :show, :id => @finance.id) %>">
+              Next
+</div>

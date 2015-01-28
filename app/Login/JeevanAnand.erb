@@ -1,0 +1,11 @@
+<div data-role="page">
+<div data-role="header" data-position="inline">
+<h1>Hello Agent! </h1>
+</div>
+<div data-role="content">
+   <ul data-role="listview">
+      <li><a href="<%= url_for :controller => :PersonalForm, :action => :new %> ">Personal Form </a></li>
+      <li><a href="<%= url_for :controller => :FinancialForm, :action => :index %> ">Financial Form </a></li>
+      <li><a href="<%= url_for :action => :HealthForm %>">Health Form </a></li>
+   </ul>
+</div>

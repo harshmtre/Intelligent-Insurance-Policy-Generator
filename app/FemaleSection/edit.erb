@@ -1,0 +1,61 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @femalesection.Id %></h1>
+    <a href="<%= url_for :action => :show, :id => @femalesection.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @femalesection.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @femalesection.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Id]" class="fieldLabel">Id</label>
+            <input type="text" id="femalesection[Id]" name="femalesection[Id]" value="<%= @femalesection.Id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Pregnant]" class="fieldLabel">Pregnant</label>
+            <input type="text" id="femalesection[Pregnant]" name="femalesection[Pregnant]" value="<%= @femalesection.Pregnant %>" <%= placeholder( "Pregnant" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Last_Delivery]" class="fieldLabel">Last delivery</label>
+            <input type="text" id="femalesection[Last_Delivery]" name="femalesection[Last_Delivery]" value="<%= @femalesection.Last_Delivery %>" <%= placeholder( "Last delivery" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Abortion]" class="fieldLabel">Abortion</label>
+            <input type="text" id="femalesection[Abortion]" name="femalesection[Abortion]" value="<%= @femalesection.Abortion %>" <%= placeholder( "Abortion" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[UMP]" class="fieldLabel">Ump</label>
+            <input type="text" id="femalesection[UMP]" name="femalesection[UMP]" value="<%= @femalesection.UMP %>" <%= placeholder( "Ump" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[RMP]" class="fieldLabel">Rmp</label>
+            <input type="text" id="femalesection[RMP]" name="femalesection[RMP]" value="<%= @femalesection.RMP %>" <%= placeholder( "Rmp" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Complications]" class="fieldLabel">Complications</label>
+            <input type="text" id="femalesection[Complications]" name="femalesection[Complications]" value="<%= @femalesection.Complications %>" <%= placeholder( "Complications" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="femalesection[Weakness]" class="fieldLabel">Weakness</label>
+            <input type="text" id="femalesection[Weakness]" name="femalesection[Weakness]" value="<%= @femalesection.Weakness %>" <%= placeholder( "Weakness" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

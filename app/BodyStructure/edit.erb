@@ -1,0 +1,61 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @bodystructure.id %></h1>
+    <a href="<%= url_for :action => :show, :id => @bodystructure.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @bodystructure.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @bodystructure.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="bodystructure[id]" class="fieldLabel">Id</label>
+            <input type="text" id="bodystructure[id]" name="bodystructure[id]" value="<%= @bodystructure.id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="bodystructure[syphilis]" class="fieldLabel">Syphilis</label>
+            <input type="text" id="bodystructure[syphilis]" name="bodystructure[syphilis]" value="<%= @bodystructure.syphilis %>" <%= placeholder( "Syphilis" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="bodystructure[hernia]" class="fieldLabel">Hernia</label>
+            <input type="text" id="bodystructure[hernia]" name="bodystructure[hernia]" value="<%= @bodystructure.hernia %>" <%= placeholder( "Hernia" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="bodystructure[goitre]" class="fieldLabel">Goitre</label>
+            <input type="text" id="bodystructure[goitre]" name="bodystructure[goitre]" value="<%= @bodystructure.goitre %>" <%= placeholder( "Goitre" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="bodystructure[filariasis]" class="fieldLabel">Filariasis</label>
+            <input type="text" id="bodystructure[filariasis]" name="bodystructure[filariasis]" value="<%= @bodystructure.filariasis %>" <%= placeholder( "Filariasis" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="bodystructure[varicoseveins]" class="fieldLabel">Varicoseveins</label>
+            <input type="text" id="bodystructure[varicoseveins]" name="bodystructure[varicoseveins]" value="<%= @bodystructure.varicoseveins %>" <%= placeholder( "Varicoseveins" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="bodystructure[skineruptions]" class="fieldLabel">Skineruptions</label>
+            <input type="text" id="bodystructure[skineruptions]" name="bodystructure[skineruptions]" value="<%= @bodystructure.skineruptions %>" <%= placeholder( "Skineruptions" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="bodystructure[gonorrhea]" class="fieldLabel">Gonorrhea</label>
+            <input type="text" id="bodystructure[gonorrhea]" name="bodystructure[gonorrhea]" value="<%= @bodystructure.gonorrhea %>" <%= placeholder( "Gonorrhea" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

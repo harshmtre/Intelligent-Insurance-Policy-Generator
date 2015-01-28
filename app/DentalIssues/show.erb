@@ -1,0 +1,35 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @dentalissues.id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @dentalissues.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @dentalissues.id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Pyrarrhoea</div>
+            <div class="itemValue"><%= @dentalissues.pyrarrhoea %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Missingteeth</div>
+            <div class="itemValue"><%= @dentalissues.missingteeth %></div>
+          </li>
+      
+    </ul>
+  </div> <% @id = @dentalissues.id %>
+      <%  @finance = DentalIssues.find(:first, :conditions => {'id' => @id})%>
+      <a href="<%= url_for( :controller => :Lungs, :action => :show, :id => @finance.id) %>">
+              Next</div>

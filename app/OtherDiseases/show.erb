@@ -1,0 +1,56 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @otherdiseases.id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @otherdiseases.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @otherdiseases.id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Cancer</div>
+            <div class="itemValue"><%= @otherdiseases.cancer %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Hiv</div>
+            <div class="itemValue"><%= @otherdiseases.hiv %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Leprosy</div>
+            <div class="itemValue"><%= @otherdiseases.leprosy %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Rheumatism</div>
+            <div class="itemValue"><%= @otherdiseases.rheumatism %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Tumor</div>
+            <div class="itemValue"><%= @otherdiseases.tumor %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Gout</div>
+            <div class="itemValue"><%= @otherdiseases.gout %></div>
+          </li>
+      
+    </ul>
+  </div><% @id = @otherdiseases.id %>
+      <%  @finance = OtherDiseases.find(:first, :conditions => {'id' => @id})%>
+      <a href="<%= url_for( :controller => :BodilyDefects, :action => :show, :id => @finance.id) %>">
+              Next
+</div>

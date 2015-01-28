@@ -1,0 +1,55 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @femalesection.Id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @femalesection.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @femalesection.Id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Pregnant</td>
+        <td class="itemValue"><%= @femalesection.Pregnant%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">LastDelivery</td>
+        <td class="itemValue"><%= @femalesection.Last_Delivery%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Abortion</td>
+        <td class="itemValue"><%= @femalesection.Abortion%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">UMP</td>
+        <td class="itemValue"><%= @femalesection.UMP%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">RMP</td>
+        <td class="itemValue"><%= @femalesection.RMP%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Complications</td>
+        <td class="itemValue"><%= @femalesection.Complications%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Weakness</td>
+        <td class="itemValue"><%= @femalesection.Weakness%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,41 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @diabetes.id %></h1>
+    <a href="<%= url_for :action => :show, :id => @diabetes.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @diabetes.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @diabetes.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="diabetes[id]" class="fieldLabel">Id</label>
+            <input type="text" id="diabetes[id]" name="diabetes[id]" value="<%= @diabetes.id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="diabetes[type1]" class="fieldLabel">Type1</label>
+            <input type="text" id="diabetes[type1]" name="diabetes[type1]" value="<%= @diabetes.type1 %>" <%= placeholder( "Type1" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="diabetes[typ2]" class="fieldLabel">Typ2</label>
+            <input type="text" id="diabetes[typ2]" name="diabetes[typ2]" value="<%= @diabetes.typ2 %>" <%= placeholder( "Typ2" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="diabetes[gestationaldiabetes]" class="fieldLabel">Gestationaldiabetes</label>
+            <input type="text" id="diabetes[gestationaldiabetes]" name="diabetes[gestationaldiabetes]" value="<%= @diabetes.gestationaldiabetes %>" <%= placeholder( "Gestationaldiabetes" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

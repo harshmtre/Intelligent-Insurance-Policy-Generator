@@ -1,0 +1,92 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Body Structure <%= @bodystructure.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                               
+                               @model002s1 = DentalIssues.find(:all)
+                               
+                               
+                                @model002s1.each do |model001|
+                                  $fid3 = model001.id
+                                  
+                                end
+                                 $fid3 = $fid3.to_i
+                                 
+                               
+                                %>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @bodystructure.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="bodystructure[id]" class="fieldLabel">Id</label>
+            <input type="text" id="bodystructure[id]" name="bodystructure[id]" <%= placeholder("Id") %> value="<%= $fid3 %>" />
+          </div>
+      
+          <ol>
+          <li>
+          Syphilis
+            <input type="radio" id="bodystructure[syphilis]-1" value="y" name="bodystructure[syphilis]" <%= placeholder("Syphilis") %> />
+            <label for="bodystructure[syphilis]-1">Yes</label>
+            <input type="radio" id="bodystructure[syphilis]-2" value="n" checked name="bodystructure[syphilis]" <%= placeholder("Syphilis") %> />
+              <label for="bodystructure[syphilis]-2">No</label>
+          </li>
+          <li>
+          Hernia
+            <input type="radio" id="bodystructure[hernia]-1" value="y" name="bodystructure[hernia]" <%= placeholder("Hernia") %> />
+              <label for="bodystructure[hernia]-1">Yes</label>
+            <input type="radio" id="bodystructure[hernia]-2" value="n" checked name="bodystructure[hernia]" <%= placeholder("Hernia") %> />
+              <label for="bodystructure[hernia]-2">No</label>
+          </li>
+          <li>
+          Goitre
+            <input type="radio" id="bodystructure[goitre]-1" value="y" name="bodystructure[goitre]" <%= placeholder("Goitre") %> />
+              <label for="bodystructure[goitre]-1">Yes</label>
+            <input type="radio" id="bodystructure[goitre]-2" value="n" checked name="bodystructure[goitre]" <%= placeholder("Goitre") %> />
+              <label for="bodystructure[goitre]-2">No</label>
+          </li>
+          <li>
+          Filariasis
+            <input type="radio" id="bodystructure[filariasis]-1" value="y" name="bodystructure[filariasis]" <%= placeholder("Filariasis") %> />
+              <label for="bodystructure[filariasis]-1">Yes</label>
+            <input type="radio" id="bodystructure[filariasis]-2" value="n" checked name="bodystructure[filariasis]" <%= placeholder("Filariasis") %> />
+              <label for="bodystructure[filariasis]-2">No</label>
+          </li>
+          <li>
+          Varicose veins
+            <input type="radio" id="bodystructure[varicoseveins]-1" value="y" name="bodystructure[varicoseveins]" <%= placeholder("Varicoseveins") %> />
+              <label for="bodystructure[varicoseveins]-1">Yes</label>
+            <input type="radio" id="bodystructure[varicoseveins]-2" value="n" checked name="bodystructure[varicoseveins]" <%= placeholder("Varicoseveins") %> />
+              <label for="bodystructure[varicoseveins]-2">No</label>
+          </li>
+          <li>
+          Skin Eruptions
+            <input type="radio" id="bodystructure[skineruptions]-1" value="y" name="bodystructure[skineruptions]" <%= placeholder("Skineruptions") %> />
+              <label for="bodystructure[skineruptions]-1">Yes</label>
+            <input type="radio" id="bodystructure[skineruptions]-2" value="n" checked name="bodystructure[skineruptions]" <%= placeholder("Skineruptions") %> />
+              <label for="bodystructure[skineruptions]-2">No</label>
+          </li>
+          <li>
+          Gonorrhea
+            <input type="radio" id="bodystructure[gonorrhea]-1" value="y" name="bodystructure[gonorrhea]" <%= placeholder("Gonorrhea") %> />
+              <label for="bodystructure[gonorrhea]-1">Yes</label>
+            <input type="radio" id="bodystructure[gonorrhea]-2" value="n" checked name="bodystructure[gonorrhea]" <%= placeholder("Gonorrhea") %> />
+              <label for="bodystructure[gonorrhea]-2">No</label>
+          </li>
+          </ol>
+      
+
+      <input type="submit" value="Next >>"/>
+              <a href="NervousSystem\new"> Back
+
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,50 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Body Defects <%= @bodilydefects.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                                    
+                                    @model002s1 = DentalIssues.find(:all)
+                                    
+                                    
+                                     @model002s1.each do |model001|
+                                       $fid3 = model001.id
+                                       
+                                     end
+                                      $fid3 = $fid3.to_i
+                                      
+                                    
+                                     %>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @bodilydefects.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="bodilydefects[id]" class="fieldLabel">Id</label>
+            <input type="text" id="bodilydefects[id]" name="bodilydefects[id]" <%= placeholder("Id") %> value="<%= $fid3 %>"/>
+          </div>
+      
+          <ol>
+          <li>
+          Handicap
+            <input type="radio" id="bodilydefects[handicap]-1" value="y" name="bodilydefects[handicap]" <%= placeholder("Handicap") %> />
+            <label for="bodilydefects[handicap]-1">Yes</label>
+            <input type="radio" id="bodilydefects[handicap]-2" checked value="n" name="bodilydefects[handicap]" <%= placeholder("Handicap") %> />
+              <label for="bodilydefects[handicap]-2">No</label>
+            </li>
+            <ol>
+      
+
+      <input type="submit" value="Compute"/>
+              <a href="OtherDiseases\new"> Back
+
+    </form>
+  </div>
+
+</div>

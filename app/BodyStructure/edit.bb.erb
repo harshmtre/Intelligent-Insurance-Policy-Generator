@@ -1,0 +1,59 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @bodystructure.object %>
+    <h1>Edit <%= @bodystructure.id%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @bodystructure.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @bodystructure.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Id: </td>
+              <td class="itemValue"><input type="text" name="bodystructure[id]" value="<%= @bodystructure.id %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Syphilis: </td>
+              <td class="itemValue"><input type="text" name="bodystructure[syphilis]" value="<%= @bodystructure.syphilis %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Hernia: </td>
+              <td class="itemValue"><input type="text" name="bodystructure[hernia]" value="<%= @bodystructure.hernia %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Goitre: </td>
+              <td class="itemValue"><input type="text" name="bodystructure[goitre]" value="<%= @bodystructure.goitre %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Filariasis: </td>
+              <td class="itemValue"><input type="text" name="bodystructure[filariasis]" value="<%= @bodystructure.filariasis %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Varicoseveins: </td>
+              <td class="itemValue"><input type="text" name="bodystructure[varicoseveins]" value="<%= @bodystructure.varicoseveins %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Skineruptions: </td>
+              <td class="itemValue"><input type="text" name="bodystructure[skineruptions]" value="<%= @bodystructure.skineruptions %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Gonorrhea: </td>
+              <td class="itemValue"><input type="text" name="bodystructure[gonorrhea]" value="<%= @bodystructure.gonorrhea %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

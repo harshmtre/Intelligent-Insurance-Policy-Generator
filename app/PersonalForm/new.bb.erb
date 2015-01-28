@@ -1,0 +1,83 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1>New PersonalForm</h1>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @personalform.object %>"/>
+      <table>
+          
+            <tr>
+                <td class="itemLabel">Id: </td>
+                <td class="itemValue"><input type="text" name="personalform[Id]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Fname: </td>
+                <td class="itemValue"><input type="text" name="personalform[Fname]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Mname: </td>
+                <td class="itemValue"><input type="text" name="personalform[Mname]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Lname: </td>
+                <td class="itemValue"><input type="text" name="personalform[Lname]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Gender: </td>
+                <td class="itemValue"><input type="text" name="personalform[Gender]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Dob: </td>
+                <td class="itemValue"><input type="text" name="personalform[Dob]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Pob: </td>
+                <td class="itemValue"><input type="text" name="personalform[Pob]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Age: </td>
+                <td class="itemValue"><input type="text" name="personalform[Age]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Address: </td>
+                <td class="itemValue"><input type="text" name="personalform[Address]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Nationality: </td>
+                <td class="itemValue"><input type="text" name="personalform[Nationality]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Relation to insured: </td>
+                <td class="itemValue"><input type="text" name="personalform[Relation_to_Insured]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Occupation: </td>
+                <td class="itemValue"><input type="text" name="personalform[Occupation]"/></td>
+            </tr>
+          
+            <tr>
+                <td class="itemLabel">Length of service: </td>
+                <td class="itemValue"><input type="text" name="personalform[Length_of_Service]"/></td>
+            </tr>
+          
+      </table>
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

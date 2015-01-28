@@ -1,0 +1,56 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @generalhealth.Id %></h1>
+    <a href="<%= url_for :action => :show, :id => @generalhealth.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @generalhealth.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @generalhealth.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Id]" class="fieldLabel">Id</label>
+            <input type="text" id="generalhealth[Id]" name="generalhealth[Id]" value="<%= @generalhealth.Id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Email]" class="fieldLabel">Email</label>
+            <input type="text" id="generalhealth[Email]" name="generalhealth[Email]" value="<%= @generalhealth.Email %>" <%= placeholder( "Email" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Army_Navy]" class="fieldLabel">Army navy</label>
+            <input type="text" id="generalhealth[Army_Navy]" name="generalhealth[Army_Navy]" value="<%= @generalhealth.Army_Navy %>" <%= placeholder( "Army navy" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Height]" class="fieldLabel">Height</label>
+            <input type="text" id="generalhealth[Height]" name="generalhealth[Height]" value="<%= @generalhealth.Height %>" <%= placeholder( "Height" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Weight]" class="fieldLabel">Weight</label>
+            <input type="text" id="generalhealth[Weight]" name="generalhealth[Weight]" value="<%= @generalhealth.Weight %>" <%= placeholder( "Weight" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Doc]" class="fieldLabel">Doc</label>
+            <input type="text" id="generalhealth[Doc]" name="generalhealth[Doc]" value="<%= @generalhealth.Doc %>" <%= placeholder( "Doc" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="generalhealth[Prev_Surgeries]" class="fieldLabel">Prev surgeries</label>
+            <input type="text" id="generalhealth[Prev_Surgeries]" name="generalhealth[Prev_Surgeries]" value="<%= @generalhealth.Prev_Surgeries %>" <%= placeholder( "Prev surgeries" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

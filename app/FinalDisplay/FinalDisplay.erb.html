@@ -1,0 +1,70 @@
+<html>
+
+   <head>
+      <title> Final Value </title>
+   </head>
+   
+   <body>
+   
+ <br>
+  
+<b> <u> 
+<%=
+fileNameW67 = File.join(Rho::RhoApplication::get_base_app_path(), 'FinalCompute22.txt')
+
+       afile67=File.new(fileNameW67,'r+')
+       while line = afile67.gets
+            linesplit67 = line.split(",")
+       end
+       
+       
+       %>
+       <br>
+</b> </u> 
+The Final Value is 
+<%=linesplit[0]%>
+<%
+@id=@bodilydefects.id
+@financialform = FinancialForm.find(:first, :conditions => {'Id' => @id})    
+  
+
+@currpremium=@financialform.Amount_of_Deposit
+
+@currpremium=@currpremium.to_f
+
+@a=linesplit[0]
+if @a<=0.4
+  %> You are in no risk category!
+ 
+  <% 
+end
+
+if @a<=0.6 && @a>0.4
+  %> You are in low risk category!
+ 
+  <%
+  @currpremium=@currpremium*0.05
+end
+
+if @a<=0.8 && @a>0.6
+  %> You are in medium risk category!
+ 
+  <%@currpremium=@currpremium*0.1
+end
+
+if @a<=0.95 && @a>0.8
+  %> You are in high risk category!
+ 
+  <%@currpremium=@currpremium*0.2
+end
+
+if @a<=1 && @a>0.95
+  %> Sorry your policy has been declined!
+ 
+  <%
+end
+
+
+
+%>
+<br><br>

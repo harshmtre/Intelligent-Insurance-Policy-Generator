@@ -1,0 +1,7 @@
+10001,asd,n,1.75,75,asd,ads
+10002,ASD,n,1.75,75,ASD,AD
+10003,as,n,1.72,72,asd,asd
+10004,sad,n,1.72,72,asd,asd
+10005,asd,n,1.72,72,asd,dsa
+10006,asd,n,1.5,90,asd,asd
+10007,aalhad_22@yahoo.com,n,1.72,72,asd,asd

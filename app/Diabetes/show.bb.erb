@@ -1,0 +1,35 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @diabetes.id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @diabetes.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @diabetes.id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Type1</td>
+        <td class="itemValue"><%= @diabetes.type1%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Typ2</td>
+        <td class="itemValue"><%= @diabetes.typ2%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Gestationaldiabetes</td>
+        <td class="itemValue"><%= @diabetes.gestationaldiabetes%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,64 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Diabetes <%= @diabetes.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                                    
+                                    @model002s1 = DentalIssues.find(:all)
+                                    
+                                    
+                                     @model002s1.each do |model001|
+                                       $fid3 = model001.id
+                                       
+                                     end
+                                      $fid3 = $fid3.to_i
+                                      
+                                    
+                                     %>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @diabetes.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="diabetes[id]" class="fieldLabel">Id</label>
+            <input type="text" id="diabetes[id]" name="diabetes[id]" <%= placeholder("Id") %> value="<%= $fid3 %>"/>
+          </div>
+      
+          <ol>
+          <li>
+          Type 1 Diabetes
+            <input type="radio" id="diabetes[type1]-1" value="y" name="diabetes[type1]" <%= placeholder("Type1") %> />
+            <label for="diabetes[type1]-1">Yes</label>
+            <input type="radio" id="diabetes[type1]-2" value="n" checked name="diabetes[type1]" <%= placeholder("Type1") %> />
+              <label for="diabetes[type1]-2">No</label>
+          </li>
+          <li>
+          Type 2 Diabetes
+            <input type="radio" id="diabetes[typ2]-1" value="y" name="diabetes[typ2]" <%= placeholder("Typ2") %> />
+              <label for="diabetes[typ2]-1">Yes</label>
+            <input type="radio" id="diabetes[typ2]-2" value="n" checked name="diabetes[typ2]" <%= placeholder("Typ2") %> />
+              <label for="diabetes[typ2]-2">No</label>
+          </li>
+          <li>
+          Gestational Diabetes
+            <input type="radio" id="diabetes[gestationaldiabetes]-1" value="y" name="diabetes[gestationaldiabetes]" <%= placeholder("Gestationaldiabetes") %> />
+              <label for="diabetes[gestationaldiabetes]-1">Yes</label>
+            <input type="radio" id="diabetes[gestationaldiabetes]-2" value="n" checked name="diabetes[gestationaldiabetes]" <%= placeholder("Gestationaldiabetes") %> />
+              <label for="diabetes[gestationaldiabetes]-2">No</label>
+          </li>
+          </ol>
+      
+
+      <input type="submit" value="Next >>"/>
+              <a href="BodyStructure\new"> Back
+
+    </form>
+  </div>
+
+</div>

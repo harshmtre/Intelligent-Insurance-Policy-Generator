@@ -1,0 +1,59 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @generalhealth.Id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @generalhealth.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @generalhealth.Id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Email</div>
+            <div class="itemValue"><%= @generalhealth.Email %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">ArmyNavy</div>
+            <div class="itemValue"><%= @generalhealth.Army_Navy %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Height</div>
+            <div class="itemValue"><%= @generalhealth.Height %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Weight</div>
+            <div class="itemValue"><%= @generalhealth.Weight %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Doc</div>
+            <div class="itemValue"><%= @generalhealth.Doc %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">PrevSurgeries</div>
+            <div class="itemValue"><%= @generalhealth.Prev_Surgeries %></div>
+          </li>
+      
+    </ul>
+  </div>
+      <% @id = @generalhealth.Id %>
+              
+            <%  @finance = GeneralHealth.find(:first, :conditions => {'Id' => @id})%>
+              <a href="<%= url_for( :controller => :Narcotics, :action => :show, :id => @finance.Id) %>">
+                
+                Next
+</div>

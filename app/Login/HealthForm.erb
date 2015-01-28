@@ -1,0 +1,13 @@
+<div data-role="page">
+<div data-role="header" data-position="inline">
+<h1>Hello Agent! </h1>
+</div>
+<div data-role="content">
+   <ul data-role="listview">
+      <li><a href="<%= url_for :controller => :GeneralHealth, :action => :new %>"> General Health </a></li>
+      <li><a href="<%= url_for :controller => :Narcotics, :action => :new %>">  Narcotics  </a></li>
+       <li><a href="<%= url_for :controller => :FamliyHistory, :action => :new %>">  Family History  </a></li>
+         <li><a href="<%= url_for :controller => :FemaleSection, :action => :new %>">  Female Section  </a></li>
+         <li><a href="<%= url_for :action => :Diseases %>">  Diseases  </a></li>
+   </ul>
+</div>

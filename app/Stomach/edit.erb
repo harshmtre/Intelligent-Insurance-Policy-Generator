@@ -1,0 +1,66 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @stomach.id %></h1>
+    <a href="<%= url_for :action => :show, :id => @stomach.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @stomach.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @stomach.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="stomach[id]" class="fieldLabel">Id</label>
+            <input type="text" id="stomach[id]" name="stomach[id]" value="<%= @stomach.id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stomach[hepatitis]" class="fieldLabel">Hepatitis</label>
+            <input type="text" id="stomach[hepatitis]" name="stomach[hepatitis]" value="<%= @stomach.hepatitis %>" <%= placeholder( "Hepatitis" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stomach[ulcer]" class="fieldLabel">Ulcer</label>
+            <input type="text" id="stomach[ulcer]" name="stomach[ulcer]" value="<%= @stomach.ulcer %>" <%= placeholder( "Ulcer" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stomach[colitis]" class="fieldLabel">Colitis</label>
+            <input type="text" id="stomach[colitis]" name="stomach[colitis]" value="<%= @stomach.colitis %>" <%= placeholder( "Colitis" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stomach[piles]" class="fieldLabel">Piles</label>
+            <input type="text" id="stomach[piles]" name="stomach[piles]" value="<%= @stomach.piles %>" <%= placeholder( "Piles" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stomach[anaemia]" class="fieldLabel">Anaemia</label>
+            <input type="text" id="stomach[anaemia]" name="stomach[anaemia]" value="<%= @stomach.anaemia %>" <%= placeholder( "Anaemia" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stomach[jaundice]" class="fieldLabel">Jaundice</label>
+            <input type="text" id="stomach[jaundice]" name="stomach[jaundice]" value="<%= @stomach.jaundice %>" <%= placeholder( "Jaundice" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stomach[dysentery]" class="fieldLabel">Dysentery</label>
+            <input type="text" id="stomach[dysentery]" name="stomach[dysentery]" value="<%= @stomach.dysentery %>" <%= placeholder( "Dysentery" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="stomach[gallstone]" class="fieldLabel">Gallstone</label>
+            <input type="text" id="stomach[gallstone]" name="stomach[gallstone]" value="<%= @stomach.gallstone %>" <%= placeholder( "Gallstone" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

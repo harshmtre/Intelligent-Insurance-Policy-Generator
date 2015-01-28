@@ -1,0 +1,62 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @nervoussystem.id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @nervoussystem.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @nervoussystem.id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Epilepsy</div>
+            <div class="itemValue"><%= @nervoussystem.epilepsy %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Paralysis</div>
+            <div class="itemValue"><%= @nervoussystem.paralysis %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Insanity</div>
+            <div class="itemValue"><%= @nervoussystem.insanity %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Nervousbreakdown</div>
+            <div class="itemValue"><%= @nervoussystem.nervousbreakdown %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Alzheimer</div>
+            <div class="itemValue"><%= @nervoussystem.alzheimer %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Multiplesclerosis</div>
+            <div class="itemValue"><%= @nervoussystem.multiplesclerosis %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Parkinson</div>
+            <div class="itemValue"><%= @nervoussystem.parkinson %></div>
+          </li>
+      
+    </ul>
+  </div>
+      <% @id = @nervoussystem.id %>
+            <%  @finance = NervousSystem.find(:first, :conditions => {'id' => @id})%>
+            <a href="<%= url_for( :controller => :BodyStructure, :action => :show, :id => @finance.id) %>">
+                    Next
+</div>

@@ -1,0 +1,41 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @finaldisplay.id %></h1>
+    <a href="<%= url_for :action => :show, :id => @finaldisplay.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @finaldisplay.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @finaldisplay.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="finaldisplay[id]" class="fieldLabel">Id</label>
+            <input type="text" id="finaldisplay[id]" name="finaldisplay[id]" value="<%= @finaldisplay.id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finaldisplay[value]" class="fieldLabel">Value</label>
+            <input type="text" id="finaldisplay[value]" name="finaldisplay[value]" value="<%= @finaldisplay.value %>" <%= placeholder( "Value" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finaldisplay[risk]" class="fieldLabel">Risk</label>
+            <input type="text" id="finaldisplay[risk]" name="finaldisplay[risk]" value="<%= @finaldisplay.risk %>" <%= placeholder( "Risk" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="finaldisplay[premium]" class="fieldLabel">Premium</label>
+            <input type="text" id="finaldisplay[premium]" name="finaldisplay[premium]" value="<%= @finaldisplay.premium %>" <%= placeholder( "Premium" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,55 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @nervoussystem.id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @nervoussystem.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @nervoussystem.id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Epilepsy</td>
+        <td class="itemValue"><%= @nervoussystem.epilepsy%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Paralysis</td>
+        <td class="itemValue"><%= @nervoussystem.paralysis%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Insanity</td>
+        <td class="itemValue"><%= @nervoussystem.insanity%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Nervousbreakdown</td>
+        <td class="itemValue"><%= @nervoussystem.nervousbreakdown%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Alzheimer</td>
+        <td class="itemValue"><%= @nervoussystem.alzheimer%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Multiplesclerosis</td>
+        <td class="itemValue"><%= @nervoussystem.multiplesclerosis%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Parkinson</td>
+        <td class="itemValue"><%= @nervoussystem.parkinson%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

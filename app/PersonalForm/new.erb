@@ -1,0 +1,244 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Personal Form<%= @personalform.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                $fid1 = 10000
+                @personalforms1 = PersonalForm.find(:all)
+                
+                
+                 @personalforms1.each do |personalform|
+                   $fid1 = personalform.Id
+                   
+                 end
+                  $fid1 = $fid1.to_i
+                   $fid1 += 1
+                
+                 %>
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>" name="myForm">
+      <input type="hidden" name="id" value="<%= @personalform.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Id]" class="fieldLabel">Id</label>
+            <input type="text" readonly="readonly" id="personalform[Id]" value="<%= $fid1 %>" name="personalform[Id]" <%= placeholder("Id") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Fname]" class="fieldLabel">First Name </label>
+            <input type="text" id="personalform[Fname]" name="personalform[Fname]" <%= placeholder("Fname") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Mname]" class="fieldLabel">Middle Name</label>
+            <input type="text" id="personalform[Mname]" name="personalform[Mname]" <%= placeholder("Mname") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Lname]" class="fieldLabel">Last Name</label>
+            <input type="text" id="personalform[Lname]" name="personalform[Lname]" <%= placeholder("Lname") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+          Gender
+            <label for="personalform[Gender]-1" class="fieldLabel">Male</label>
+            <input type="radio" id="personalform[Gender]-1" value="Male" name="personalform[Gender]" <%= placeholder("Gender") %> />
+              <label for="personalform[Gender]-2" class="fieldLabel">Female</label>
+            <input type="radio" id="personalform[Gender]-2" value="Female" name="personalform[Gender]" <%= placeholder("Gender") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Dob]" class="fieldLabel">Date of Birth </label>
+            <input type="text" value="(dd/mm/yyyy)" id="personalform[Dob]" name="personalform[Dob]" <%= placeholder("Dob") %> />
+          </div>
+           
+          <div data-role="fieldcontain">
+            <label for="personalform[Pob]" class="fieldLabel">Place of Birth </label>
+            <input type="text" id="personalform[Pob]" name="personalform[Pob]" <%= placeholder("Pob") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Age]" class="fieldLabel">Age</label>
+            <input type="number" id="personalform[Age]" name="personalform[Age]" <%= placeholder("Age") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Address]" class="fieldLabel">Address</label>
+            <input type="text" id="personalform[Address]" name="personalform[Address]" <%= placeholder("Address") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Nationality]" class="fieldLabel">Nationality</label>
+            <input type="text" id="personalform[Nationality]" name="personalform[Nationality]" <%= placeholder("Nationality") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Relation_to_Insured]" class="fieldLabel">Relationship to the Insured</label>
+            <input type="text" id="personalform[Relation_to_Insured]" name="personalform[Relation_to_Insured]" <%= placeholder("Relation to insured") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Occupation]" class="fieldLabel">Occupation</label>
+            <input type="text" id="personalform[Occupation]" name="personalform[Occupation]" <%= placeholder("Occupation") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="personalform[Length_of_Service]" class="fieldLabel">Length of service</label>
+            <input type="text" id="personalform[Length_of_Service]" name="personalform[Length_of_Service]" <%= placeholder("Length of service") %> />
+          </div>
+       
+
+      <input type="button" value="Create" onclick="validateForm()"/>
+    </form>
+  </div>
+              <script type="text/javascript">
+              
+                                          function validateForm(){
+                                            
+                                                                       
+                                                var fname=document.forms["myForm"]["personalform[Fname]"].value;
+                                                  
+                                            
+                                                var mname=document.forms["myForm"]["personalform[Mname]"].value;
+                                                var lname=document.forms["myForm"]["personalform[Lname]"].value;
+                                          
+                                               var gender=document.forms["myForm"]["personalform[Gender]"].value;
+                                            //alert("hello "+fname+" "+mname+" "+lname+" "+gender);
+                                                var dob=document.forms["myForm"]["personalform[Dob]"].value;
+                                                var pob=document.forms["myForm"]["personalform[Pob]"].value;
+                                                var age=document.forms["myForm"]["personalform[Age]"].value;
+                                                var address=document.forms["myForm"]["personalform[Address]"].value;  
+                                                var nationality=document.forms["myForm"]["personalform[Nationality]"].value;
+                                                var rel=document.forms["myForm"]["personalform[Relation_to_Insured]"].value;
+                                                var occ=document.forms["myForm"]["personalform[Occupation]"].value;
+                                                var los=document.forms["myForm"]["personalform[Length_of_Service]"].value;
+                                                
+                                               
+                                                  
+                                                   
+                                                
+                                                 if (fname==null || fname=="")
+                                                {
+                                                
+                                                   
+                                                    alert("First Name can't be empty");
+                                                    
+                                                    return;
+                                                 }
+                                                   var iChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?";
+                                                                                                   
+                                                for(var i=0;i<fname.length;i++)
+                                                {
+                                                   if(iChars.indexOf(fname.charAt(i))!=-1)
+                                                   {
+                                                      alert("First Name Cannot contain Special Characters");
+                                                      return;     
+                                                   }
+                                                        
+                                                }
+                                                
+                                                
+                                                
+                                                 if(lname==null || lname=="")
+                                                 {
+                                                   alert("Last Name can't be empty");
+                                                   return;
+                                                 }
+                                                   
+                                                 for(var j=0;j<lname.length;j++)
+                                                 {
+                                                      if(iChars.indexOf(lname.charAt(j))!=-1)
+                                                      {
+                                                       alert("Last Name Cannot contain Special Characters");
+                                                       return;     
+                                                      }
+                                                                                                                                                           
+                                                 }
+                                                                                                  
+                                                 if(document.forms["myForm"]["personalform[Gender]"][0].checked==false&&document.forms["myForm"]["personalform[Gender]"][1].checked==false)
+                                                 {
+                                                     alert("Please select a Gender");
+                                                    
+                                                     return;
+                                                 }
+                                                 //alert("ssup";)
+  
+                                                 if(dob==null || dob=="")
+                                                 {
+                                                     alert("Date of Birth can't be empty");
+                                                     return;
+                                                 }
+                                                   if(dob.length!=10||dob.charAt(2)!='/'||dob.charAt(5)!='/')
+                                                  {
+                                                      alert("Enter Date only in this format : (dd/mm/yyyy)");    
+                                                      return;
+                                                  }
+                                                                                                    
+                                                     var d=dob.charAt(0)+dob.charAt(1);
+                                                     var m=dob.charAt(3)+dob.charAt(4);
+                                                     var y=dob.charAt(6)+dob.charAt(7)+dob.charAt(8)+dob.charAt(9);
+                                                     if(isNaN(d)||isNaN(m)||isNaN(y))
+                                                     {
+                                                        alert("Date should be in numeric form");
+                                                         return;
+                                                    }
+                                                 
+  
+                                                 if(pob==null || pob=="")
+                                                 {
+                                                     alert("Place of Birth can't be empty");
+                                                     return;
+                                                 }
+  
+                                                 if(age==null || age=="")
+                                                 {
+                                                     alert("Age can't be empty");
+                                                     return;
+                                                 }
+                                                 if(isNaN(age))
+                                                   {
+                                                 alert("Age should be Numeric");
+                                                 return;    
+                                                   }
+                                                 
+                                                 if(address==null || address=="")
+                                                 {
+                                                     alert("Adress can't be empty");
+                                                     return;
+                                                 }
+  
+                                                 if(nationality==null || nationality=="")
+                                                 {
+                                                     alert("Nationality can't be empty");
+                                                     return;
+                                                 }
+  
+                                                 if(rel==null || rel=="")
+                                                 {
+                                                     alert("Please enter appropriate relationship to the insured");
+                                                     return;
+                                                 }
+  
+                                                 if(occ==null || occ=="")
+                                                 {
+                                                     alert("PLease enter your occupation");
+                                                     return;
+                                                 }
+  
+                                                 if(los==null || los=="")
+                                                 {
+                                                     alert("Please enter Length of Service");
+                                                     return;
+                                                 }
+                                                
+                                                                                                     
+                                                                                                  
+                                                 document.forms["myForm"].submit();
+                                                 }
+                                               </script>
+</div>

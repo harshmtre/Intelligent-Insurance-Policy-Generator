@@ -1,0 +1,66 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @stomach.id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @stomach.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @stomach.id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Hepatitis</div>
+            <div class="itemValue"><%= @stomach.hepatitis %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Ulcer</div>
+            <div class="itemValue"><%= @stomach.ulcer %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Colitis</div>
+            <div class="itemValue"><%= @stomach.colitis %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Piles</div>
+            <div class="itemValue"><%= @stomach.piles %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Anaemia</div>
+            <div class="itemValue"><%= @stomach.anaemia %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Jaundice</div>
+            <div class="itemValue"><%= @stomach.jaundice %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Dysentery</div>
+            <div class="itemValue"><%= @stomach.dysentery %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Gallstone</div>
+            <div class="itemValue"><%= @stomach.gallstone %></div>
+          </li>
+      
+    </ul>
+  </div><% @id = @stomach.id %>
+      <%  @finance = Stomach.find(:first, :conditions => {'id' => @id})%>
+      <a href="<%= url_for( :controller => :ExcretarySystem, :action => :show, :id => @finance.id) %>">
+              Next</div>
+</div>

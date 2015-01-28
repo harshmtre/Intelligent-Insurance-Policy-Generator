@@ -1,0 +1,57 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @lungs.id %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+    <a href="<%= url_for :action => :edit, :id => @lungs.object %>" class="ui-btn-right" data-icon="star">
+      Edit
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Id</div>
+            <div class="itemValue"><%= @lungs.id %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Tuberculosis</div>
+            <div class="itemValue"><%= @lungs.tuberculosis %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Pneumonia</div>
+            <div class="itemValue"><%= @lungs.pneumonia %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Spittingofblood</div>
+            <div class="itemValue"><%= @lungs.spittingofblood %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Bronchitis</div>
+            <div class="itemValue"><%= @lungs.bronchitis %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Asthma</div>
+            <div class="itemValue"><%= @lungs.asthma %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Persistentcough</div>
+            <div class="itemValue"><%= @lungs.persistentcough %></div>
+          </li>
+      
+    </ul>
+  </div>
+      <% @id = @lungs.id %>
+            <%  @finance = Lungs.find(:first, :conditions => {'id' => @id})%>
+            <a href="<%= url_for( :controller => :HeartBlood, :action => :show, :id => @finance.id) %>">
+                    Next</div>
+</div>

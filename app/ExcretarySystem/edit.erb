@@ -1,0 +1,46 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @excretarysystem.id %></h1>
+    <a href="<%= url_for :action => :show, :id => @excretarysystem.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @excretarysystem.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @excretarysystem.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="excretarysystem[id]" class="fieldLabel">Id</label>
+            <input type="text" id="excretarysystem[id]" name="excretarysystem[id]" value="<%= @excretarysystem.id %>" <%= placeholder( "Id" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="excretarysystem[chronic]" class="fieldLabel">Chronic</label>
+            <input type="text" id="excretarysystem[chronic]" name="excretarysystem[chronic]" value="<%= @excretarysystem.chronic %>" <%= placeholder( "Chronic" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="excretarysystem[prostratediseases]" class="fieldLabel">Prostratediseases</label>
+            <input type="text" id="excretarysystem[prostratediseases]" name="excretarysystem[prostratediseases]" value="<%= @excretarysystem.prostratediseases %>" <%= placeholder( "Prostratediseases" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="excretarysystem[urinary]" class="fieldLabel">Urinary</label>
+            <input type="text" id="excretarysystem[urinary]" name="excretarysystem[urinary]" value="<%= @excretarysystem.urinary %>" <%= placeholder( "Urinary" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="excretarysystem[kidneystone]" class="fieldLabel">Kidneystone</label>
+            <input type="text" id="excretarysystem[kidneystone]" name="excretarysystem[kidneystone]" value="<%= @excretarysystem.kidneystone %>" <%= placeholder( "Kidneystone" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

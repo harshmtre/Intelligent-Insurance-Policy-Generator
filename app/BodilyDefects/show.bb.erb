@@ -1,0 +1,25 @@
+<div data-role="page" data-add-back-btn="true">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :index %>
+    <h1><%= @bodilydefects.id %></h1>
+    <%= link_to "Edit", :action => :edit, :id => @bodilydefects.object %>
+  </div>
+
+  <div data-role="content">
+    <table>
+      
+      <tr>
+    	<td class="itemLabel">Id</td>
+        <td class="itemValue"><%= @bodilydefects.id%></td>
+      </tr>
+      
+      <tr>
+    	<td class="itemLabel">Handicap</td>
+        <td class="itemValue"><%= @bodilydefects.handicap%></td>
+      </tr>
+      
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,106 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Financial Form<%= @financialform.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+      <%  
+                
+              @financialforms1 = PersonalForm.find(:all)
+               
+                
+              @financialforms1.each do |personalform|
+               $fid2 = personalform.Id
+                   
+                end
+                  $fid2 = $fid2.to_i
+                  
+                
+         %>
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>" name="myForm">
+      <input type="hidden" name="id" value="<%= @financialform.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="financialform[Id]" class="fieldLabel">Id</label>
+            <input type="text" readonly="readonly" value="<%= $fid2 %>" id="financialform[Id]" name="financialform[Id]" <%= placeholder("Id") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="financialform[Annual_Income]" class="fieldLabel">Annual Income</label>
+            <input type="number" id="financialform[Annual_Income]" name="financialform[Annual_Income]" <%= placeholder("Annual income") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="financialform[Sum_Assured]" class="fieldLabel">Sum Assured</label>
+            <input type="number" id="financialform[Sum_Assured]" name="financialform[Sum_Assured]" <%= placeholder("Sum assured") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="financialform[Payable_Time]" class="fieldLabel">Payable Time</label>
+            <input type="text" id="financialform[Payable_Time]" name="financialform[Payable_Time]" <%= placeholder("Payable time") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="financialform[Amount_of_Deposit]" class="fieldLabel">Premium</label>
+            <input type="number" id="financialform[Amount_of_Deposit]" name="financialform[Amount_of_Deposit]" <%= placeholder("Amount of deposit") %> />
+          </div>
+      
+
+      <input type="button" value="Create" onclick="validateForm()"/>
+              <a href="PersonalForm\new"> Back</a>
+    </form>
+  </div>
+              <script type="text/javascript">
+                                          function validateForm()
+                                          {
+                                            
+                                         
+                                            var ann=document.forms["myForm"]["financialform[Annual_Income]"].value;
+                                            var sumass=document.forms["myForm"]["financialform[Sum_Assured]"].value;  
+                                            var payable=document.forms["myForm"]["financialform[Payable_Time]"].value;
+                                            var amt=document.forms["myForm"]["financialform[Amount_of_Deposit]"].value;  
+                                            if(ann==null||ann=="")
+                                            {
+                                                alert("Annual Income cannot be empty"); 
+                                                return;      
+                                            }
+                                            if(isNaN(ann))
+                                            {
+                                                alert("Annual income should be in Numeric Form");
+                                              return;     
+                                            }
+                                           
+                                            if(sumass==null||sumass=="")
+                                            {
+                                                alert("Please enter the sum assured");    
+                                              return;     
+                                            }
+                                            if(isNaN(sumass))
+                                            {
+                                              alert("Sum Assured should be Numeric");  
+                                              return;
+                                            }
+                                            
+                                           if(payable==null||payable=="")
+                                           {
+                                                alert("Please enter Payable time(Monthly/Quaterly/Yearly)");
+                                             return;
+                                           }
+                                           if(amt==null||amt=="")
+                                           {
+                                                alert("Premium cannot be empty");
+                                             return;
+                                           }
+                                           if(isNaN(amt))
+                                           {
+                                                alert("Premium should be Numeric"); 
+                                             return;       
+                                           }
+                                             document.forms["myForm"].submit();
+                                          }
+                      </script>
+</div>

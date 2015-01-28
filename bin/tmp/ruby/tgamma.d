@@ -1,0 +1,1 @@
+platform/shared/ruby/missing/tgamma.c  /MotorolaRhoMobileSuite2.2.1.13/ruby/lib/ruby/gems/1.9.1/gems/rhodes-3.5.1.13/platform/android/../shared/ruby/android/ruby/config.h  /Android/android-ndk-r8d/sources/cxx-stl/stlport/stlport/math.h  /Android/android-ndk-r8d/sources/cxx-stl/stlport/stlport/errno.h

@@ -1,0 +1,54 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @generalhealth.object %>
+    <h1>Edit <%= @generalhealth.Id%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @generalhealth.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @generalhealth.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Id: </td>
+              <td class="itemValue"><input type="text" name="generalhealth[Id]" value="<%= @generalhealth.Id %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Email: </td>
+              <td class="itemValue"><input type="text" name="generalhealth[Email]" value="<%= @generalhealth.Email %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Army navy: </td>
+              <td class="itemValue"><input type="text" name="generalhealth[Army_Navy]" value="<%= @generalhealth.Army_Navy %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Height: </td>
+              <td class="itemValue"><input type="text" name="generalhealth[Height]" value="<%= @generalhealth.Height %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Weight: </td>
+              <td class="itemValue"><input type="text" name="generalhealth[Weight]" value="<%= @generalhealth.Weight %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Doc: </td>
+              <td class="itemValue"><input type="text" name="generalhealth[Doc]" value="<%= @generalhealth.Doc %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Prev surgeries: </td>
+              <td class="itemValue"><input type="text" name="generalhealth[Prev_Surgeries]" value="<%= @generalhealth.Prev_Surgeries %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>
